@@ -9,15 +9,25 @@ DoMysteryGift:
 	call WaitBGMap
 	farcall PrepMysteryGiftDataToSend
 	call MysteryGift_ClearTrainerData
+	vc_patch infrared_fake_0
+if DEF(_CRYSTAL11_VC)
+	farcall StagePartyDataForMysteryGift
+	call ClearMysteryGiftTrainer
+	nop
+else
 	ld a, $2
 	ld [wca01], a
 	ld a, $14
 	ld [wca02], a
+endc
+	vc_patch_end
+
 	ldh a, [rIE]
 	push af
 
 	call Function104a95
 
+    vc_hook infrared_fake_4
 	ld d, a
 	xor a
 	ldh [rIF], a

@@ -38,8 +38,12 @@ Click once on the text that says "**Skip**" next to each package to select the m
 
 Then download [**rgbds**](https://github.com/rednex/rgbds/releases/): the latest **win64.zip** or **win32.zip** release. Extract it and put all the `exe` and `dll` files individually in **C:\cygwin64\usr\local\bin**.
 
+<<<<<<< Updated upstream
 builds with 0.4.1
 
+=======
+BUILDS WITH 0.4.1
+>>>>>>> Stashed changes
 
 Now open the **Cygwin terminal** and enter the following commands.
 
