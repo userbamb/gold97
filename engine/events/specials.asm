@@ -106,7 +106,7 @@ NameMom:
 	call InitName
 	ret
 	
-	.default
+.default
 	db "MOMMY@"
 
 NameRater:
