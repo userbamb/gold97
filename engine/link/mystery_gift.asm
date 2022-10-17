@@ -236,6 +236,26 @@ endc
 	jp CloseSRAM
 
 Function104a95:
+    vc_hook infrared_fake_2
+	vc_patch infrared_fake_1
+if DEF(_CRYSTAL11_VC)
+	ld d, $ef
+.loop
+	dec d
+	ld a, d
+	or a
+	jr nz, .loop
+	vc_hook infrared_fake_3
+	nop
+	cp MG_CANCELED
+.restart ; same location as unpatched .restart
+	ret z
+	nop
+	nop
+	cp MG_OKAY
+	jr nz, ExchangeMysteryGiftData
+	ret
+else
 	di
 	farcall ClearChannels
 	call Function104d5e
@@ -244,6 +264,9 @@ Function104a95:
 	call Function104d96
 	call Function104ddd
 	ldh a, [hMGStatusFlags]
+endc
+	vc_patch_end
+	
 	cp $10
 	jp z, Function104bd0
 	cp $6c

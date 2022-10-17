@@ -9,7 +9,13 @@ RGBFIX := rgbfix
 RGBGFX := rgbgfx
 RGBLINK := rgblink
 
-roms := pokegold97.gbc pokesilver97.gbc
+roms := pokegold97.gbc pokesilver97.gbc \
+           pokecrystal.gbc \
+           pokecrystal11.gbc \
+           pokecrystal_au.gbc \
+           pokecrystal_debug.gbc \
+           pokecrystal11_debug.gbc
+patches := pokecrystal11.patch
 
 gold_obj := \
 audio.o \
@@ -28,6 +34,7 @@ gfx/sprites.o \
 lib/mobile/main.o
 
 silver_obj := $(gold_obj:.o=_silver.o)
+pokecrystal11_vc_obj    := $(rom_obj:.o=11_vc.o)
 
 
 ### Build targets
@@ -41,12 +48,44 @@ silver_obj := $(gold_obj:.o=_silver.o)
 all: gold silver
 gold: pokegold97.gbc
 silver: pokesilver97.gbc
+crystal11_vc:    pokecrystal11.patch
 
-clean:
+clean: tidy
 	rm -f $(roms) $(gold_obj) $(silver_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
-	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" -o -name "*.sgb.tilemap" \) -delete
-	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
+	find gfx \
+	     \( -name "*.[12]bpp" \
+	        -o -name "*.lz" \
+	        -o -name "*.gbcpal" \
+	        -o -name "*.sgb.tilemap" \) \
+	     -delete
+	find gfx/pokemon -mindepth 1 \
+	     ! -path "gfx/pokemon/unown/*" \
+	     \( -name "bitmask.asm" \
+	        -o -name "frames.asm" \
+	        -o -name "front.animated.tilemap" \
+	        -o -name "front.dimensions" \) \
+	     -delete
 	$(MAKE) clean -C tools/
+
+tidy:
+	$(RM) $(roms) \
+	      $(roms:.gbc=.sym) \
+	      $(roms:.gbc=.map) \
+	      $(patches) \
+	      $(patches:.patch=_vc.gbc) \
+	      $(patches:.patch=_vc.sym) \
+	      $(patches:.patch=_vc.map) \
+	      $(patches:%.patch=vc/%.constants.sym) \
+	      $(pokecrystal_obj) \
+	      $(pokecrystal11_obj) \
+	      $(pokecrystal11_vc_obj) \
+	      $(pokecrystal_au_obj) \
+	      $(pokecrystal_debug_obj) \
+	      $(pokecrystal11_debug_obj) \
+	      rgbdscheck.o
+	$(MAKE) clean -C tools/
+compare: $(roms) $(patches)
+	    @$(SHA1) -c roms.sha1
 
 tools:
 	$(MAKE) -C tools/
@@ -54,6 +93,12 @@ tools:
 
 $(gold_obj):   RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD
 $(silver_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
+$(pokecrystal11_vc_obj):    RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL11_VC
+
+%.patch: %_vc.sym vc/%.constants.sym %_vc.gbc %.gbc vc/%.patch.template
+	tools/make_patch $^ $@
+
+%.sym: ;
 
 # The dep rules have to be explicit or else missing files won't be reported.
 # As a side effect, they're evaluated immediately instead of when the rule is invoked.
@@ -71,10 +116,14 @@ $(info $(shell $(MAKE) -C tools))
 
 $(foreach obj, $(silver_obj), $(eval $(call DEP,$(obj),$(obj:_silver.o=.asm))))
 $(foreach obj, $(gold_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(pokecrystal11_vc_obj), $(eval $(call DEP,$(obj),$(obj:11_vc.o=.asm))))
 
+# Dependencies for VC files that need to run scan_includes
+%.constants.sym: %.constants.asm $(shell tools/scan_includes %.constants.asm) | rgbdscheck.o
+	$(RGBASM) $< > $@
 endif
-
-
+pokecrystal11_vc_opt    = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+pokecrystal11_vc_base    = us
 pokegold97.gbc: $(gold_obj) pokecrystal.link
 	$(RGBLINK) -n pokegold97.sym -m pokegold97.map -l pokecrystal.link -o $@ $(gold_obj)
 	$(RGBFIX) -Cjv -i AURF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_GOLD $@
