@@ -313,7 +313,7 @@ WaitLinkTransfer::
 	ld a, [wOtherPlayerLinkAction]
 	inc a
 	jr z, .loop
-vc_patch Network10
+    vc_patch Network10
 if DEF(_CRYSTAL11_VC)
 	ld b, 26
 else
