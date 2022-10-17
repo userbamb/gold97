@@ -2830,7 +2830,7 @@ JumpluffEvosAttacks:
 	db 33, COTTON_SPORE
 	db 38, AMNESIA
 	db 43, GIGA_DRAIN
-	db 48, DOUBLE_EDGE
+	db 48, SPORE
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
@@ -3283,7 +3283,7 @@ MadameEvosAttacks:
 	db 39, SWORDS_DANCE
 	db 46, AGILITY
 	db 54, FALSE_SWIPE
-	db 61, SKY_ATTACK
+	db 61, AEROBLAST
 	db 0 ; no more level-up moves
 
 KurstrawEvosAttacks:
@@ -3349,7 +3349,7 @@ RemoraidEvosAttacks:
 	db 12, AURORA_BEAM
 	db 18, BUBBLEBEAM
 	db 23, FOCUS_ENERGY
-	db 29, ICE_BEAM
+	db 29, DYNAMICPUNCH
 	db 34, LOCK_ON
 	db 40, HYDRO_PUMP
 	db 45, ZAP_CANNON
@@ -3365,7 +3365,7 @@ OctilleryEvosAttacks:
 	db 18, BUBBLEBEAM
 	db 23, FOCUS_ENERGY
 	db 25, OCTAZOOKA
-	db 30, ICE_BEAM
+	db 30, DYNAMICPUNCH
 	db 38, LOCK_ON
 	db 45, HYDRO_PUMP
 	db 53, ZAP_CANNON
@@ -3684,11 +3684,11 @@ WolfanEvosAttacks:
 	db 7, POWDER_SNOW
 	db 12, FURY_SWIPES
 	db 18, LOW_KICK
-	db 23, SAFEGUARD
+	db 23, MOONLIGHT
 	db 29, ICY_WIND
-	db 34, SLASH
+	db 34, EARTHQUAKE
 	db 40, SCREECH
-	db 45, CONFUSE_RAY
+	db 45, CRUNCH
 	db 51, BLIZZARD
 	db 0 ; no more level-up moves
 
@@ -3699,12 +3699,12 @@ WarwolfEvosAttacks:
 	db 7, POWDER_SNOW
 	db 12, FURY_SWIPES
 	db 18, LOW_KICK
-	db 23, SAFEGUARD
+	db 23, MOONLIGHT
 	db 29, ICY_WIND
 	db 31, ICE_PUNCH
-	db 35, SLASH
+	db 35, EARTHQUAKE
 	db 41, SCREECH
-	db 49, CONFUSE_RAY
+	db 49, CRUNCH
 	db 56, BLIZZARD
 	db 0 ; no more level-up moves
 
