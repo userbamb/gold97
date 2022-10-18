@@ -1271,7 +1271,7 @@ CoinHurlDescription:
 	
 MegaphoneDescription:
 	db   "A loud noise that"
-	next "lowers SPCL.ATK.@"
+	next "leeches life.@"
 	
 CrossCutterDescription:
 	db   "Has a high criti-"
