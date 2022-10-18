@@ -87,7 +87,7 @@ tools:
 
 
 $(pokegold97_obj):    RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD
-$(silver97_obj):      RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
+$(pokesilver97_obj):  RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
 $(pokegold97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD   -D _CRYSTAL11_VC
 $(pokegold97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER -D _CRYSTAL11_VC
 
