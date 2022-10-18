@@ -145,7 +145,7 @@ ScriptCommandTable:
 	dw Script_loadmenu                   ; 4f
 	dw Script_closewindow                ; 50
 	dw Script_jumptextfaceplayer         ; 51
-if _CRYSTAL
+if DEF(_CRYSTAL)
 	dw Script_farjumptext                ; 52
 endc
 	dw Script_jumptext                   ; 53
@@ -330,7 +330,7 @@ JumpTextScript:
 	closetext
 	end
 
-if _CRYSTAL
+if DEF(_CRYSTAL)
 
 Script_farjumptext:
 ; script command 0x52

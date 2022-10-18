@@ -6,22 +6,22 @@ ENDM
 
 vc_patch: MACRO
    if DEF(_CRYSTAL11_VC)
-        assert !DEF(CURRENT_VC_PATCH), "Already started a vc_patch"
+;        assert !DEF(CURRENT_VC_PATCH), "Already started a vc_patch"
 CURRENT_VC_PATCH EQUS "\1"
-	.VC_{CURRENT_VC_PATCH}::
+;.VC_{CURRENT_VC_PATCH}::
     endc
 ENDM
 
 vc_patch_end: MACRO
     if DEF(_CRYSTAL11_VC)
-        assert DEF(CURRENT_VC_PATCH), "No vc_patch started"
-        .VC_{CURRENT_VC_PATCH}_End::
+;        assert DEF(CURRENT_VC_PATCH), "No vc_patch started"
+;.VC_{CURRENT_VC_PATCH}_End::
 PURGE CURRENT_VC_PATCH
     endc
 ENDM
 
 vc_assert: MACRO
     if DEF(_CRYSTAL11_VC)
-        assert \#
+;        assert \#
     endc
 ENDM

@@ -11,7 +11,6 @@ tools := \
 	pokemon_animation \
 	pokemon_animation_graphics \
 	gfx \
-	make_patch \
 	md5
 all: $(tools)
 	@:

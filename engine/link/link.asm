@@ -2395,7 +2395,7 @@ Link_CheckCommunicationError:
 	ret
 
 .AcknowledgeSerial:
-vc_patch NetworkDelay3
+	vc_patch NetworkDelay3
 if DEF(_CRYSTAL11_VC)
 	ld b, 26
 else

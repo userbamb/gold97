@@ -4,20 +4,16 @@ else
 SHA1 := sha1sum
 endif
 
-RGBASM := rgbasm
-RGBFIX := rgbfix
-RGBGFX := rgbgfx
-RGBLINK := rgblink
+RGBDS ?=
+RGBASM  ?= $(RGBDS)rgbasm
+RGBFIX  ?= $(RGBDS)rgbfix
+RGBGFX  ?= $(RGBDS)rgbgfx
+RGBLINK ?= $(RGBDS)rgblink
 
-roms := pokegold97.gbc pokesilver97.gbc \
-           pokecrystal.gbc \
-           pokecrystal11.gbc \
-           pokecrystal_au.gbc \
-           pokecrystal_debug.gbc \
-           pokecrystal11_debug.gbc
-patches := pokecrystal11.patch
+roms := pokegold97.gbc pokesilver97.gbc
+patches := pokegold97.patch pokesilver97.patch
 
-gold_obj := \
+rom_obj := \
 audio.o \
 home.o \
 main.o \
@@ -33,8 +29,10 @@ gfx/pics.o \
 gfx/sprites.o \
 lib/mobile/main.o
 
-silver_obj := $(gold_obj:.o=_silver.o)
-pokecrystal11_vc_obj    := $(rom_obj:.o=11_vc.o)
+pokegold97_obj      := $(rom_obj:.o=gold97.o)
+pokesilver97_obj    := $(rom_obj:.o=silver97.o)
+pokegold97_vc_obj   := $(rom_obj:.o=gold97_vc.o)
+pokesilver97_vc_obj := $(rom_obj:.o=silver97_vc.o)
 
 
 ### Build targets
@@ -45,13 +43,13 @@ pokecrystal11_vc_obj    := $(rom_obj:.o=11_vc.o)
 .PRECIOUS:
 .SECONDARY:
 
-all: gold silver
-gold: pokegold97.gbc
-silver: pokesilver97.gbc
-crystal11_vc:    pokecrystal11.patch
+all: $(roms)
+gold:      pokegold97.gbc
+silver:    pokesilver97.gbc
+gold_vc:   pokegold97.patch
+silver_vc: pokesilver97.patch
 
 clean: tidy
-	rm -f $(roms) $(gold_obj) $(silver_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
 	find gfx \
 	     \( -name "*.[12]bpp" \
 	        -o -name "*.lz" \
@@ -65,7 +63,6 @@ clean: tidy
 	        -o -name "front.animated.tilemap" \
 	        -o -name "front.dimensions" \) \
 	     -delete
-	$(MAKE) clean -C tools/
 
 tidy:
 	$(RM) $(roms) \
@@ -76,27 +73,26 @@ tidy:
 	      $(patches:.patch=_vc.sym) \
 	      $(patches:.patch=_vc.map) \
 	      $(patches:%.patch=vc/%.constants.sym) \
-	      $(pokecrystal_obj) \
-	      $(pokecrystal11_obj) \
-	      $(pokecrystal11_vc_obj) \
-	      $(pokecrystal_au_obj) \
-	      $(pokecrystal_debug_obj) \
-	      $(pokecrystal11_debug_obj) \
+	      $(pokegold97_obj) \
+	      $(pokesilver97_obj) \
+	      $(pokegold97_vc_obj) \
+	      $(pokesilver97_vc_obj) \
 	      rgbdscheck.o
 	$(MAKE) clean -C tools/
-compare: $(roms) $(patches)
-	    @$(SHA1) -c roms.sha1
+	$(MAKE) clean -C new_tools/
 
 tools:
 	$(MAKE) -C tools/
+	$(MAKE) -C new_tools/
 
 
-$(gold_obj):   RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD
-$(silver_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
-$(pokecrystal11_vc_obj):    RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL11_VC
+$(pokegold97_obj):    RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD
+$(silver97_obj):      RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
+$(pokegold97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD   -D _CRYSTAL11_VC
+$(pokegold97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER -D _CRYSTAL11_VC
 
-%.patch: %_vc.sym vc/%.constants.sym %_vc.gbc %.gbc vc/%.patch.template
-	tools/make_patch $^ $@
+%.patch: vc/%.constants.sym %_vc.gbc %.gbc vc/%.patch.template
+	new_tools/make_patch $*_vc.sym $^ $@
 
 %.sym: ;
 
@@ -114,23 +110,26 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
 
-$(foreach obj, $(silver_obj), $(eval $(call DEP,$(obj),$(obj:_silver.o=.asm))))
-$(foreach obj, $(gold_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
-$(foreach obj, $(pokecrystal11_vc_obj), $(eval $(call DEP,$(obj),$(obj:11_vc.o=.asm))))
+$(foreach obj, $(pokegold97_obj), $(eval $(call DEP,$(obj),$(obj:gold97.o=.asm))))
+$(foreach obj, $(pokesilver97_obj), $(eval $(call DEP,$(obj),$(obj:silver97.o=.asm))))
+$(foreach obj, $(pokegold97_vc_obj), $(eval $(call DEP,$(obj),$(obj:gold97_vc.o=.asm))))
+$(foreach obj, $(pokesilver97_vc_obj), $(eval $(call DEP,$(obj),$(obj:silver97_vc.o=.asm))))
 
 # Dependencies for VC files that need to run scan_includes
 %.constants.sym: %.constants.asm $(shell tools/scan_includes %.constants.asm) | rgbdscheck.o
-	$(RGBASM) $< > $@
+	$(RGBASM) $(RGBASMFLAGS) $< > $@
 endif
-pokecrystal11_vc_opt    = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-pokecrystal11_vc_base    = us
-pokegold97.gbc: $(gold_obj) pokecrystal.link
-	$(RGBLINK) -n pokegold97.sym -m pokegold97.map -l pokecrystal.link -o $@ $(gold_obj)
-	$(RGBFIX) -Cjv -i AURF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_GOLD $@
 
-pokesilver97.gbc: $(silver_obj) pokecrystal.link
-	$(RGBLINK) -n pokesilver97.sym -m pokesilver97.map -l pokecrystal.link -o $@ $(silver_obj)
-	$(RGBFIX) -Cjv -i AGRF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_SILVER $@
+
+pokegold97_opt      = -Cjv -i AURF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_GOLD
+pokesilver97_opt    = -Cjv -i AGRF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_SILVER
+pokegold97_vc_opt   = -Cjv -i AURF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_GOLD
+pokesilver97_vc_opt = -Cjv -i AGRF -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_SILVER
+
+
+%.gbc: $$(%_obj) pokecrystal.link
+	$(RGBLINK) -n $*.sym -m $*.map -l pokecrystal.link -o $@ $(filter %.o,$^)
+	$(RGBFIX) $($*_opt) $@
 
 
 # For files that the compressor can't match, there will be a .lz file suffixed with the md5 hash of the correct uncompressed file.
