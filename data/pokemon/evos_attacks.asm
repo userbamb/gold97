@@ -3689,7 +3689,6 @@ WolfanEvosAttacks:
 	db 29, ICY_WIND
 	db 34, EARTHQUAKE
 	db 40, SCREECH
-	db 45, CRUNCH
 	db 51, BLIZZARD
 	db 0 ; no more level-up moves
 
@@ -3706,7 +3705,6 @@ WarwolfEvosAttacks:
 	db 35, EARTHQUAKE
 	db 41, SCREECH
 	db 49, CRUNCH
-	db 53, CROSS_CUTTER
 	db 56, BLIZZARD
 	db 0 ; no more level-up moves
 
