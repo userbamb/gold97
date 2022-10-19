@@ -201,7 +201,7 @@ Moves:
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,   100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,   100, 10,  30
 	move MUD_SLAP,     EFFECT_ACCURACY_DOWN_HIT,  20, GROUND,   100, 10, 100
-	move OCTAZOOKA,    EFFECT_ACCURACY_DOWN_HIT,  65, WATER,     85, 10,  50
+	move OCTAZOOKA,    EFFECT_SP_DEF_UP_2,       100, WATER,    100, 10,   0
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,   100, 20,   0
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      100, ELECTRIC,  50,  5, 100
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,   100, 40,   0
@@ -220,7 +220,7 @@ Moves:
 	move FALSE_SWIPE,  EFFECT_FALSE_SWIPE,        40, NORMAL,   100, 40,   0
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,    90, 15, 100
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,   100, 10,   0
-	move SPARK,        EFFECT_PARALYZE_HIT,       85, ELECTRIC, 100, 20,  40
+	move SPARK,        EFFECT_SP_ATK_UP,          75, ELECTRIC, 100, 20,   0
 	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        10, BUG,       95, 20,   0
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,     90, 25,  10
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,   100,  5,   0
@@ -264,6 +264,6 @@ Moves:
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,     70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,     100, 10,   0
 	move COIN_HURL,    EFFECT_COIN_HURL,          40, NORMAL,   100, 20,   0
-	move MEGAPHONE,    EFFECT_LEECH_HIT,         100, NORMAL,   100, 20,   0
+	move MEGAPHONE,    EFFECT_LEECH_HIT,          90, NORMAL,   100, 20,   0
 	move ROCK_HEAD,    EFFECT_FLINCH_HIT,         90, ROCK,     100, 10,  30
 	move STRUGGLE,     EFFECT_RECOIL_HIT,         50, NORMAL,   100,  1,   0
