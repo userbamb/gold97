@@ -2470,7 +2470,7 @@ NoctowlEvosAttacks:
 	db 32, TAKE_DOWN
 	db 38, WING_ATTACK
 	db 44, DREAM_EATER
-	db 50, SKY_ATTACK
+	db 50, AEROBLAST
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
@@ -2736,6 +2736,7 @@ AzumarillEvosAttacks:
 	db 37, RAIN_DANCE
 	db 42, HYDRO_PUMP
 	db 46, DOUBLE_EDGE
+	db 52, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 BomshealEvosAttacks:
@@ -2770,8 +2771,8 @@ PolitoedEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, PERISH_SONG
-	db 35, PERISH_SONG
-	db 51, SWAGGER
+	db 35, MEAN_LOOK
+	db 51, ENCORE
 	db 0 ; no more level-up moves
 
 HoppipEvosAttacks:
@@ -3705,6 +3706,7 @@ WarwolfEvosAttacks:
 	db 35, EARTHQUAKE
 	db 41, SCREECH
 	db 49, CRUNCH
+	db 53, CROSS_CUTTER
 	db 56, BLIZZARD
 	db 0 ; no more level-up moves
 
