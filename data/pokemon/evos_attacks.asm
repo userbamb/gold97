@@ -2437,7 +2437,7 @@ GelaniaEvosAttacks:
 	db 31, GIGA_DRAIN
 	db 34, SLEEP_POWDER
 	db 40, ANCIENTPOWER
-	db 50, SLAM
+	db 50, LEECH_SEED
 	db 0 ; no more level-up moves
 
 HoothootEvosAttacks:
@@ -2843,7 +2843,7 @@ AipomEvosAttacks:
 	db 19, FURY_SWIPES
 	db 24, PURSUIT
 	db 27, SWIFT
-	db 36, MUD_SLAP
+	db 36, CROSS_CHOP
 	db 46, MIMIC
 	db 0 ; no more level-up moves
 
@@ -3166,7 +3166,7 @@ ScizorEvosAttacks:
 	db 18, FALSE_SWIPE
 	db 24, AGILITY
 	db 30, WING_ATTACK
-	db 34, FURY_CUTTER
+	db 34, CROSS_CUTTER
 	db 39, SLASH
 	db 43, RAZOR_WIND
 	db 48, SWORDS_DANCE
@@ -3283,7 +3283,7 @@ MadameEvosAttacks:
 	db 31, SLASH
 	db 39, SWORDS_DANCE
 	db 46, AGILITY
-	db 54, FALSE_SWIPE
+	db 54, CROSS_CUTTER
 	db 61, AEROBLAST
 	db 0 ; no more level-up moves
 
@@ -3300,7 +3300,7 @@ KurstrawEvosAttacks:
 	db 24, MEAN_LOOK
 	db 28, CONFUSE_RAY
 	db 33, NIGHT_SHADE
-	db 37, BODY_SLAM
+	db 37, RECOVER
 	db 32, PAIN_SPLIT
 	db 46, SHADOW_BALL
 	db 51, PERISH_SONG
@@ -3317,9 +3317,9 @@ PangshiEvosAttacks:
 	db 19, PSYBEAM
 	db 24, MEAN_LOOK
 	db 28, CONFUSE_RAY
-	db 29, CRUNCH
+	db 30, EXTREMESPEED
 	db 35, NIGHT_SHADE
-	db 42, BODY_SLAM
+	db 42, RECOVER
 	db 48, PAIN_SPLIT
 	db 55, SHADOW_BALL
 	db 61, PERISH_SONG
@@ -3735,7 +3735,7 @@ BlisseyEvosAttacks:
 	db 28, EGG_BOMB
 	db 33, SOFTBOILED
 	db 40, LIGHT_SCREEN
-	db 47, DOUBLE_EDGE
+	db 47, SEISMIC_TOSS
 	db 0 ; no more level-up moves
 
 LugiaEvosAttacks:

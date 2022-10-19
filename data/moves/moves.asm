@@ -84,7 +84,7 @@ Moves:
 	move STRENGTH,     EFFECT_NORMAL_HIT,         80, NORMAL,   100, 15,   0
 	move ABSORB,       EFFECT_LEECH_HIT,          20, GRASS,    100, 20,   0
 	move MEGA_DRAIN,   EFFECT_LEECH_HIT,          40, GRASS,    100, 10,   0
-	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,     90, 10,   0
+	move LEECH_SEED,   EFFECT_LEECH_SEED,          0, GRASS,     95, 10,   0
 	move GROWTH,       EFFECT_SP_ATK_UP,           0, NORMAL,   100, 40,   0
 	move RAZOR_LEAF,   EFFECT_NORMAL_HIT,         55, GRASS,     95, 25,   0
 	move SOLARBEAM,    EFFECT_SOLARBEAM,         120, GRASS,    100, 10,   0
@@ -94,11 +94,11 @@ Moves:
 	move PETAL_DANCE,  EFFECT_RAMPAGE,            70, GRASS,    100, 20,   0
 	move STRING_SHOT,  EFFECT_SPEED_DOWN,          0, BUG,       95, 40,   0
 	move DRAGON_RAGE,  EFFECT_STATIC_DAMAGE,      40, DRAGON,   100, 10,   0
-	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        15, FIRE,      70, 15,   0
+	move FIRE_SPIN,    EFFECT_TRAP_TARGET,        15, FIRE,     100, 15,   0
 	move THUNDERSHOCK, EFFECT_PARALYZE_HIT,       40, ELECTRIC, 100, 30,  10
 	move THUNDERBOLT,  EFFECT_PARALYZE_HIT,       95, ELECTRIC, 100, 15,  10
 	move THUNDER_WAVE, EFFECT_PARALYZE,            0, ELECTRIC, 100, 20,   0
-	move THUNDER,      EFFECT_THUNDER,           120, ELECTRIC,  70, 10,  30
+	move THUNDER,      EFFECT_THUNDER,           120, ELECTRIC,  85, 10,  30
 	move ROCK_THROW,   EFFECT_NORMAL_HIT,         50, ROCK,      90, 15,   0
 	move EARTHQUAKE,   EFFECT_EARTHQUAKE,        100, GROUND,   100, 10,   0
 	move FISSURE,      EFFECT_OHKO,                1, GROUND,    30,  5,   0
@@ -194,14 +194,14 @@ Moves:
 	move SPITE,        EFFECT_SPITE,               0, GHOST,    100, 10,   0
 	move POWDER_SNOW,  EFFECT_FREEZE_HIT,         40, ICE,      100, 25,  10
 	move PROTECT,      EFFECT_PROTECT,             0, NORMAL,   100, 10,   0
-	move MACH_PUNCH,   EFFECT_PRIORITY_HIT,       40, FIGHTING, 100, 30,   0
+	move MACH_PUNCH,   EFFECT_PRIORITY_HIT,       60, FIGHTING, 100, 30,   0
 	move SCARY_FACE,   EFFECT_SPEED_DOWN_2,        0, NORMAL,    90, 10,   0
 	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         90, DARK,     100, 20,   0
 	move SWEET_KISS,   EFFECT_CONFUSE,             0, NORMAL,    75, 10,   0
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,   100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,   100, 10,  30
 	move MUD_SLAP,     EFFECT_ACCURACY_DOWN_HIT,  20, GROUND,   100, 10, 100
-	move OCTAZOOKA,    EFFECT_SP_DEF_UP_2,       100, WATER,    100, 10,   0
+	move OCTAZOOKA,    EFFECT_SP_DEF_UP_2,       100, WATER,     95, 10,   0
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,   100, 20,   0
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      100, ELECTRIC,  50,  5, 100
 	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,   100, 40,   0
@@ -220,7 +220,7 @@ Moves:
 	move FALSE_SWIPE,  EFFECT_FALSE_SWIPE,        40, NORMAL,   100, 40,   0
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,    90, 15, 100
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,   100, 10,   0
-	move SPARK,        EFFECT_SP_ATK_UP,          75, ELECTRIC, 100, 20,   0
+	move SPARK,        EFFECT_SPEED_UP_2,         65, ELECTRIC, 100, 20,   0
 	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        10, BUG,       95, 20,   0
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,     90, 25,  10
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,   100,  5,   0
@@ -256,7 +256,7 @@ Moves:
 	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   80, DARK,     100, 15,  20
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC,  100, 20,   0
 	move PSYCH_UP,     EFFECT_PSYCH_UP,            0, NORMAL,   100, 10,   0
-	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, NORMAL,   100,  5,   0
+	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, GHOST,    100,  5,   0
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,     100,  5,  10
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,    100, 15,  20
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,       80, PSYCHIC,   90, 15,   0
