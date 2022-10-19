@@ -75,39 +75,6 @@ Unused_CheckShininess:
 .NotShiny:
 	and a
 	ret
-
-CheckShininess:
-; Return carry if the DVs at hl are all 10 or higher.
-
-; Attack
-	ld a, [hl]
-	cp 10 << 4
-	jr c, .NotShiny
-
-; Defense
-	ld a, [hli]
-	and $f
-	cp 10
-	jr c, .NotShiny
-
-; Speed
-	ld a, [hl]
-	cp 10 << 4
-	jr c, .NotShiny
-
-; Special
-	ld a, [hl]
-	and $f
-	cp 10
-	jr c, .NotShiny
-
-.Shiny:
-	scf
-	ret
-
-.NotShiny:
-	and a
-	ret
 	
 Unreferenced_Function8aa4:
 	push de
