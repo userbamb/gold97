@@ -4,41 +4,8 @@ SHINY_ATK_BIT EQU 5
 SHINY_DEF_VAL EQU 10
 SHINY_SPD_VAL EQU 10
 SHINY_SPC_VAL EQU 10
-
-CheckShininess:
-; Return carry if the DVs at hl are all 10 or higher.
-
-; Attack
-	ld a, [hl]
-	cp 10 << 4
-	jr c, .NotShiny
-
-; Defense
-	ld a, [hli]
-	and $f
-	cp 10
-	jr c, .NotShiny
-
-; Speed
-	ld a, [hl]
-	cp 10 << 4
-	jr c, .NotShiny
-
-; Special
-	ld a, [hl]
-	and $f
-	cp 10
-	jr c, .NotShiny
-
-.Shiny:
-	scf
-	ret
-
-.NotShiny:
-	and a
-	ret
 	
-Unused_CheckShininess:
+CheckShininess:
 ; Check if a mon is shiny by DVs at bc.
 ; Return carry if shiny.
 
@@ -76,6 +43,39 @@ Unused_CheckShininess:
 	and a
 	ret
 
+Unused_CheckShininess:
+; Return carry if the DVs at hl are all 10 or higher.
+
+; Attack
+	ld a, [hl]
+	cp 10 << 4
+	jr c, .NotShiny
+
+; Defense
+	ld a, [hli]
+	and $f
+	cp 10
+	jr c, .NotShiny
+
+; Speed
+	ld a, [hl]
+	cp 10 << 4
+	jr c, .NotShiny
+
+; Special
+	ld a, [hl]
+	and $f
+	cp 10
+	jr c, .NotShiny
+
+.Shiny:
+	scf
+	ret
+
+.NotShiny:
+	and a
+	ret
+	
 Unreferenced_Function8aa4:
 	push de
 	push bc
