@@ -1659,7 +1659,7 @@ ChanseyEvosAttacks:
 	db 28, EGG_BOMB
 	db 33, SOFTBOILED
 	db 40, LIGHT_SCREEN
-	db 47, DOUBLE_EDGE
+	db 47, HEAL_BELL
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
@@ -1922,7 +1922,7 @@ GyaradosEvosAttacks:
 	db 40, CRUNCH
 	db 44, HYDRO_PUMP
 	db 48, RAIN_DANCE
-	db 52, HYPER_BEAM
+	db 52, EMBER
 	db 0 ; no more level-up moves
 
 LaprasEvosAttacks:
@@ -1936,7 +1936,7 @@ LaprasEvosAttacks:
 	db 29, PERISH_SONG
 	db 36, ICE_BEAM
 	db 43, RAIN_DANCE
-	db 50, SAFEGUARD
+	db 50, HEAL_BELL
 	db 57, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -2967,7 +2967,7 @@ MurkrowEvosAttacks:
 	db 19, NIGHT_SHADE
 	db 25, WING_ATTACK
 	db 31, FAINT_ATTACK
-	db 37, DETECT
+	db 37, EMBER
 	db 43, MEAN_LOOK
 	db 49, DRILL_PECK
 	db 55, PERISH_SONG
@@ -3041,7 +3041,7 @@ GirafarigEvosAttacks:
 	db 29, CRUNCH
 	db 32, BATON_PASS
 	db 38, PAIN_SPLIT
-	db 43, SHADOW_BALL
+	db 43, EMBER
 	db 48, PERISH_SONG
 	db 0 ; no more level-up moves
 
@@ -3187,7 +3187,7 @@ RinringEvosAttacks:
 	db 34, HEAL_BELL
 	db 38, CONFUSE_RAY
 	db 43, CRUNCH
-	db 48, SLASH
+	db 48, EMBER
 	db 52, ATTRACT
 	db 0 ; no more level-up moves
 
@@ -3204,7 +3204,7 @@ BellrunEvosAttacks:
 	db 35, HEAL_BELL
 	db 41, CONFUSE_RAY
 	db 47, CRUNCH
-	db 52, SLASH
+	db 52, EMBER
 	db 58, ATTRACT
 	db 0 ; no more level-up moves
 
@@ -3296,7 +3296,7 @@ KurstrawEvosAttacks:
 	db 6, SPITE
 	db 10, FAINT_ATTACK
 	db 15, CURSE
-	db 19, PSYBEAM
+	db 19, EMBER
 	db 24, MEAN_LOOK
 	db 28, CONFUSE_RAY
 	db 33, NIGHT_SHADE
@@ -3314,7 +3314,7 @@ PangshiEvosAttacks:
 	db 6, SPITE
 	db 10, FAINT_ATTACK
 	db 15, CURSE
-	db 19, PSYBEAM
+	db 19, EMBER
 	db 24, MEAN_LOOK
 	db 28, CONFUSE_RAY
 	db 30, EXTREMESPEED
@@ -3734,7 +3734,7 @@ BlisseyEvosAttacks:
 	db 23, MINIMIZE
 	db 28, EGG_BOMB
 	db 33, SOFTBOILED
-	db 40, LIGHT_SCREEN
+	db 40, HEAL_BELL
 	db 47, SEISMIC_TOSS
 	db 0 ; no more level-up moves
 

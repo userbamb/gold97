@@ -63,7 +63,7 @@ Moves:
 	move SONICBOOM,    EFFECT_STATIC_DAMAGE,      20, NORMAL,    90, 20,   0
 	move DISABLE,      EFFECT_DISABLE,             0, NORMAL,    55, 20,   0
 	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,   100, 30,  10
-	move EMBER,        EFFECT_BURN_HIT,           40, FIRE,     100, 25,  10
+	move EMBER,        EFFECT_BURN_HIT,           25, FIRE,      90, 25, 100
 	move FLAMETHROWER, EFFECT_BURN_HIT,           95, FIRE,     100, 15,  10
 	move MIST,         EFFECT_MIST,                0, ICE,      100, 30,   0
 	move WATER_GUN,    EFFECT_NORMAL_HIT,         40, WATER,    100, 25,   0
