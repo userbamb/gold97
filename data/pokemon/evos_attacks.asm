@@ -1621,7 +1621,7 @@ RhyhornEvosAttacks:
 	db 25, SCARY_FACE
 	db 28, STOMP
 	db 34, ROLLOUT
-	db 37, TAKE_DOWN
+	db 37, ROCK_HEAD
 	db 43, ROCK_SLIDE
 	db 46, EARTHQUAKE
 	db 52, MEGAHORN
@@ -1639,7 +1639,7 @@ RhydonEvosAttacks:
 	db 25, SCARY_FACE
 	db 28, STOMP
 	db 34, ROLLOUT
-	db 37, TAKE_DOWN
+	db 37, ROCK_HEAD
 	db 45, ROCK_SLIDE
 	db 50, EARTHQUAKE
 	db 57, MEGAHORN
@@ -1896,7 +1896,7 @@ TaurosEvosAttacks:
 	db 20, HORN_ATTACK
 	db 26, SCARY_FACE
 	db 31, TAKE_DOWN
-	db 37, REST
+	db 37, ROCK_HEAD
 	db 42, SWAGGER
 	db 48, THRASH
 	db 53, DOUBLE_EDGE
@@ -2071,7 +2071,7 @@ KabutoEvosAttacks:
 	db 18, LEER
 	db 25, SAND_ATTACK
 	db 30, ANCIENTPOWER
-	db 37, ENDURE
+	db 37, ROCK_HEAD
 	db 46, GIGA_DRAIN
 	db 55, ROCK_SLIDE
 	db 0 ; no more level-up moves
@@ -2085,7 +2085,7 @@ KabutopsEvosAttacks:
 	db 18, LEER
 	db 25, SAND_ATTACK
 	db 30, ANCIENTPOWER
-	db 37, ENDURE
+	db 37, ROCK_HEAD
 	db 40, SLASH
 	db 44, GIGA_DRAIN
 	db 53, ROCK_SLIDE
@@ -3137,7 +3137,7 @@ QuagsireEvosAttacks:
 	db 21, RAIN_DANCE
 	db 27, AMNESIA
 	db 32, SURF
-	db 39, TOXIC
+	db 39, ROCK_HEAD
 	db 47, EARTHQUAKE
 	db 0 ; no more level-up moves
 
@@ -3413,7 +3413,7 @@ SkarmoryEvosAttacks:
 	db 18, METAL_CLAW
 	db 23, AGILITY
 	db 29, WING_ATTACK
-	db 34, SLASH
+	db 34, ROCK_HEAD
 	db 40, STEEL_WING
 	db 45, SPIKES
 	db 51, DRILL_PECK
@@ -3474,7 +3474,7 @@ DonphanEvosAttacks:
 	db 19, MAGNITUDE
 	db 24, SLAM
 	db 25, FURY_ATTACK
-	db 31, TAKE_DOWN
+	db 31, ROCK_HEAD
 	db 37, RAPID_SPIN
 	db 44, SCARY_FACE
 	db 50, EARTHQUAKE
@@ -3688,7 +3688,7 @@ WolfanEvosAttacks:
 	db 23, MOONLIGHT
 	db 29, ICY_WIND
 	db 34, EARTHQUAKE
-	db 40, SCREECH
+	db 40, ROCK_HEAD
 	db 51, BLIZZARD
 	db 0 ; no more level-up moves
 
@@ -3703,7 +3703,7 @@ WarwolfEvosAttacks:
 	db 29, ICY_WIND
 	db 31, ICE_PUNCH
 	db 35, EARTHQUAKE
-	db 41, SCREECH
+	db 41, ROCK_HEAD
 	db 49, CRUNCH
 	db 56, BLIZZARD
 	db 0 ; no more level-up moves
