@@ -12,7 +12,7 @@ DoMysteryGift:
 	vc_patch infrared_fake_0
 if DEF(_CRYSTAL11_VC)
 	farcall StagePartyDataForMysteryGift
-	call ClearMysteryGiftTrainer
+	call MysteryGift_ClearTrainerData
 	nop
 else
 	ld a, $2
@@ -247,12 +247,12 @@ if DEF(_CRYSTAL11_VC)
 	jr nz, .loop
 	vc_hook infrared_fake_3
 	nop
-	cp MG_CANCELED
+	cp $10
 .restart ; same location as unpatched .restart
 	ret z
 	nop
 	nop
-	cp MG_OKAY
+	cp $6c
 	jr nz, ExchangeMysteryGiftData
 	ret
 else
