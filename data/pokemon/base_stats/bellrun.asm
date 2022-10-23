@@ -1,6 +1,6 @@
 	db BELLRUN ; 214
 
-	db  80,  95,  40, 110,  40,  75
+	db  80,  60,  80, 110,  95,  85
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, DARK ; type

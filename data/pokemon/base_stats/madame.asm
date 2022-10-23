@@ -1,6 +1,6 @@
 	db MADAME ; 219
 
-	db  67, 105,  70,  95,  65,  73
+	db  87, 105,  70,  95,  65,  73
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type

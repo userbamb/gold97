@@ -2705,7 +2705,7 @@ BellossomEvosAttacks:
 	db 1, SWEET_SCENT
 	db 1, STUN_SPORE
 	db 1, ACID
-	db 47, PETAL_DANCE
+	db 47, LEECH_SEED
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
