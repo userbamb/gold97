@@ -2705,7 +2705,7 @@ BellossomEvosAttacks:
 	db 1, SWEET_SCENT
 	db 1, STUN_SPORE
 	db 1, ACID
-	db 47, LEECH_SEED
+	db 37, LEECH_SEED
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
@@ -2733,9 +2733,9 @@ AzumarillEvosAttacks:
 	db 1, ROLLOUT
 	db 1, SLAM
 	db 33, BELLY_DRUM
-	db 37, RAIN_DANCE
+	db 37, RECOVER
 	db 42, HYDRO_PUMP
-	db 46, DOUBLE_EDGE
+	db 46, HEAL_BELL
 	db 52, PSYCHIC_M
 	db 0 ; no more level-up moves
 

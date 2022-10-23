@@ -134,7 +134,7 @@ JohtoWaterWildMons:
 	map_id SUNPOINT_DOCKS
 	db 4 percent ; encounter rate
 	db 20, TENTACOOL
-	db 18, CORASUN
+	db 18, REMORAID
 	db 22, ANCHORAGE
 	
 	map_id JADE_FOREST

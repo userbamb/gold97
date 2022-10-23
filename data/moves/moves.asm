@@ -13,7 +13,7 @@ ENDM
 Moves:
 ; entries correspond to constants/move_constants.asm
 	move POUND,        EFFECT_NORMAL_HIT,         40, NORMAL,   100, 35,   0
-	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         50, FIGHTING, 100, 25,   0
+	move KARATE_CHOP,  EFFECT_NORMAL_HIT,         60, FIGHTING, 100, 25,   0
 	move DOUBLESLAP,   EFFECT_MULTI_HIT,          15, NORMAL,    85, 10,   0
 	move COMET_PUNCH,  EFFECT_MULTI_HIT,          18, NORMAL,    85, 15,   0
 	move MEGA_PUNCH,   EFFECT_NORMAL_HIT,         80, NORMAL,    85, 20,   0
@@ -27,7 +27,7 @@ Moves:
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,    75, 10,   0
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,   100, 30,   0
 	move CUT,          EFFECT_NORMAL_HIT,         50, NORMAL,    95, 30,   0
-	move GUST,         EFFECT_GUST,               60, FLYING,   100, 35,   0
+	move GUST,         EFFECT_GUST,               70, FLYING,   100, 35,   0
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,   100, 35,   0
 	move WHIRLWIND,    EFFECT_FORCE_SWITCH,        0, NORMAL,   100, 20,   0
 	move FLY,          EFFECT_FLY,                90, FLYING,    95, 15,   0
@@ -196,7 +196,7 @@ Moves:
 	move PROTECT,      EFFECT_PROTECT,             0, NORMAL,   100, 10,   0
 	move MACH_PUNCH,   EFFECT_PRIORITY_HIT,       60, FIGHTING, 100, 30,   0
 	move SCARY_FACE,   EFFECT_SPEED_DOWN_2,        0, NORMAL,    90, 10,   0
-	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         90, DARK,     100, 20,   0
+	move FAINT_ATTACK, EFFECT_ALWAYS_HIT,         80, DARK,     100, 20,   0
 	move SWEET_KISS,   EFFECT_CONFUSE,             0, NORMAL,    75, 10,   0
 	move BELLY_DRUM,   EFFECT_BELLY_DRUM,          0, NORMAL,   100, 10,   0
 	move SLUDGE_BOMB,  EFFECT_POISON_HIT,         90, POISON,   100, 10,  30
@@ -220,7 +220,7 @@ Moves:
 	move FALSE_SWIPE,  EFFECT_FALSE_SWIPE,        40, NORMAL,   100, 40,   0
 	move SWAGGER,      EFFECT_SWAGGER,             0, NORMAL,    90, 15, 100
 	move MILK_DRINK,   EFFECT_HEAL,                0, NORMAL,   100, 10,   0
-	move SPARK,        EFFECT_ATTACK_UP_HIT,      65, ELECTRIC, 100, 20, 100
+	move SPARK,        EFFECT_DEFENSE_UP_HIT,     75, ELECTRIC, 100, 20, 100
 	move FURY_CUTTER,  EFFECT_FURY_CUTTER,        10, BUG,       95, 20,   0
 	move STEEL_WING,   EFFECT_DEFENSE_UP_HIT,     70, STEEL,     90, 25,  10
 	move MEAN_LOOK,    EFFECT_MEAN_LOOK,           0, NORMAL,   100,  5,   0
@@ -256,7 +256,7 @@ Moves:
 	move CRUNCH,       EFFECT_DEFENSE_DOWN_HIT,   80, DARK,     100, 15,  20
 	move MIRROR_COAT,  EFFECT_MIRROR_COAT,         1, PSYCHIC,  100, 20,   0
 	move PSYCH_UP,     EFFECT_PSYCH_UP,            0, NORMAL,   100, 10,   0
-	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, GHOST,    100,  5,   0
+	move EXTREMESPEED, EFFECT_PRIORITY_HIT,       80, GHOST,    100, 15,   0
 	move ANCIENTPOWER, EFFECT_ALL_UP_HIT,         60, ROCK,     100,  5,  10
 	move SHADOW_BALL,  EFFECT_SP_DEF_DOWN_HIT,    80, GHOST,    100, 15,  20
 	move FUTURE_SIGHT, EFFECT_FUTURE_SIGHT,       80, PSYCHIC,   90, 15,   0

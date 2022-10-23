@@ -7,6 +7,7 @@ TypeMatchups:; actually beta types
 	db FIRE,     GRASS,    SUPER_EFFECTIVE
 	db FIRE,     ICE,      SUPER_EFFECTIVE
 	db FIRE,     BUG,      SUPER_EFFECTIVE
+	db FIRE,     STEEL,    SUPER_EFFECTIVE
 	db FIRE,     ROCK,     NOT_VERY_EFFECTIVE
 	db FIRE,     DRAGON,   NOT_VERY_EFFECTIVE
 	db WATER,    FIRE,     SUPER_EFFECTIVE
