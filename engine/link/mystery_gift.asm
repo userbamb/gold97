@@ -9,7 +9,7 @@ DoMysteryGift:
 	call WaitBGMap
 	farcall PrepMysteryGiftDataToSend
 	call MysteryGift_ClearTrainerData
-	vc_patch infrared_fake_0
+.VC_infrared_fake_0::
 if DEF(_CRYSTAL11_VC)
 	farcall StagePartyDataForMysteryGift
 	call MysteryGift_ClearTrainerData
@@ -20,14 +20,14 @@ else
 	ld a, $14
 	ld [wca02], a
 endc
-	vc_patch_end
+.VC_infrared_fake_0_End::
 
 	ldh a, [rIE]
 	push af
 
 	call Function104a95
 
-    vc_hook infrared_fake_4
+.VC_infrared_fake_4::
 	ld d, a
 	xor a
 	ldh [rIF], a
@@ -236,8 +236,8 @@ endc
 	jp CloseSRAM
 
 Function104a95:
-    vc_hook infrared_fake_2
-	vc_patch infrared_fake_1
+.VC_infrared_fake_2::
+.VC_infrared_fake_1::
 if DEF(_CRYSTAL11_VC)
 	ld d, $ef
 .loop
@@ -245,7 +245,7 @@ if DEF(_CRYSTAL11_VC)
 	ld a, d
 	or a
 	jr nz, .loop
-	vc_hook infrared_fake_3
+.VC_infrared_fake_3::
 	nop
 	cp $10
 .restart ; same location as unpatched .restart
@@ -253,24 +253,24 @@ if DEF(_CRYSTAL11_VC)
 	nop
 	nop
 	cp $6c
-	jr nz, ExchangeMysteryGiftData
+	jr nz, Function104a95
 	ret
 else
 	di
 	farcall ClearChannels
 	call Function104d5e
 
-.loop2
+.restart
 	call Function104d96
 	call Function104ddd
 	ldh a, [hMGStatusFlags]
 endc
-	vc_patch_end
-	
+.VC_infrared_fake_1_End::
+
 	cp $10
 	jp z, Function104bd0
 	cp $6c
-	jr nz, .loop2
+	jr nz, .restart
 
 	ldh a, [hPrintNumBuffer + 8]
 	cp $2
@@ -317,9 +317,9 @@ endc
 	ld a, b
 	pop bc
 	dec b
-	jr z, .loop2 ; we never jump here
+	jr z, .restart ; we never jump here
 	or a
-	jr nz, .loop2
+	jr nz, .restart
 	; Check if we've pressed the B button
 	ldh a, [hMGJoypadReleased]
 	bit B_BUTTON_F, a

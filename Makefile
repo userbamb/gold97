@@ -89,7 +89,7 @@ tools:
 $(pokegold97_obj):    RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD
 $(pokesilver97_obj):  RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER
 $(pokegold97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _GOLD   -D _CRYSTAL11_VC
-$(pokegold97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER -D _CRYSTAL11_VC
+$(pokesilver97_vc_obj): RGBASMFLAGS = -D _CRYSTAL -D _CRYSTAL11 -D _SILVER -D _CRYSTAL11_VC
 
 %.patch: vc/%.constants.sym %_vc.gbc %.gbc vc/%.patch.template
 	new_tools/make_patch $*_vc.sym $^ $@
@@ -109,6 +109,7 @@ endef
 ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 
 $(info $(shell $(MAKE) -C tools))
+$(info $(shell $(MAKE) -C new_tools))
 
 $(foreach obj, $(pokegold97_obj), $(eval $(call DEP,$(obj),$(obj:gold97.o=.asm))))
 $(foreach obj, $(pokesilver97_obj), $(eval $(call DEP,$(obj),$(obj:silver97.o=.asm))))
@@ -116,8 +117,9 @@ $(foreach obj, $(pokegold97_vc_obj), $(eval $(call DEP,$(obj),$(obj:gold97_vc.o=
 $(foreach obj, $(pokesilver97_vc_obj), $(eval $(call DEP,$(obj),$(obj:silver97_vc.o=.asm))))
 
 # Dependencies for VC files that need to run scan_includes
-%.constants.sym: %.constants.asm $(shell tools/scan_includes %.constants.asm) | rgbdscheck.o
+%.constants.sym: %.constants.asm $(shell tools/scan_includes %.constants.asm)
 	$(RGBASM) $(RGBASMFLAGS) $< > $@
+
 endif
 
 
