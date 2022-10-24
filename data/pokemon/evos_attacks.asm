@@ -1616,7 +1616,7 @@ RhyhornEvosAttacks:
 	db 1, TAIL_WHIP
 	db 7, FURY_ATTACK
 	db 10, ROCK_THROW
-	db 16, MAGNITUDE
+	db 16, CROSS_CUTTER
 	db 19, HORN_ATTACK
 	db 25, SCARY_FACE
 	db 28, STOMP
@@ -1634,7 +1634,7 @@ RhydonEvosAttacks:
 	db 1, TAIL_WHIP
 	db 7, FURY_ATTACK
 	db 10, ROCK_THROW
-	db 16, MAGNITUDE
+	db 16, CROSS_CUTTER
 	db 19, HORN_ATTACK
 	db 25, SCARY_FACE
 	db 28, STOMP
