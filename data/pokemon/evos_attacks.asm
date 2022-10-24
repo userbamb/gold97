@@ -2573,7 +2573,7 @@ RaitoraEvosAttacks:
 	db 35, AGILITY
 	db 42, CRUNCH
 	db 49, THUNDERBOLT
-	db 56, SLASH
+	db 56, THUNDER
 	db 0 ; no more level-up moves
 
 PichuEvosAttacks:
@@ -2938,7 +2938,7 @@ EspeonEvosAttacks:
 	db 18, SWIFT
 	db 23, PSYBEAM
 	db 27, PSYCH_UP
-	db 33, FUTURE_SIGHT
+	db 33, HEAL_BELL
 	db 38, MORNING_SUN
 	db 45, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -2953,7 +2953,7 @@ UmbreonEvosAttacks:
 	db 18, BITE
 	db 23, SLUDGE
 	db 27, SCREECH
-	db 33, TOXIC
+	db 33, HEAL_BELL
 	db 38, MOONLIGHT
 	db 45, SLUDGE_BOMB
 	db 0 ; no more level-up moves
@@ -3216,11 +3216,11 @@ SneaselEvosAttacks:
 	db 11, SCREECH
 	db 16, FAINT_ATTACK
 	db 21, FURY_SWIPES
-	db 27, ICY_WIND
+	db 27, CROSS_CUTTER
 	db 32, AGILITY
 	db 38, METAL_CLAW
 	db 44, BEAT_UP
-	db 49, SLASH
+	db 49, CRUNCH
 	db 0 ; no more level-up moves
 
 QwilfishEvosAttacks:
@@ -3394,12 +3394,12 @@ MantineEvosAttacks:
 	db 1, TACKLE
 	db 1, BUBBLE
 	db 6, SUPERSONIC
-	db 11, HEADBUTT
+	db 11, HEAL_BELL
 	db 16, AGILITY
 	db 22, BUBBLEBEAM
 	db 27, WING_ATTACK
 	db 33, PSYBEAM
-	db 38, TAKE_DOWN
+	db 38, BARRIER
 	db 44, CONFUSE_RAY
 	db 49, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -3701,7 +3701,7 @@ WarwolfEvosAttacks:
 	db 18, LOW_KICK
 	db 23, MOONLIGHT
 	db 29, ICY_WIND
-	db 31, ICE_PUNCH
+	db 31, CROSS_CUTTER
 	db 35, EARTHQUAKE
 	db 41, ROCK_HEAD
 	db 49, CRUNCH
