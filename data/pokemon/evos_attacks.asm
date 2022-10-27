@@ -1729,7 +1729,7 @@ KingdraEvosAttacks:
 	db 37, AGILITY
 	db 41, DRAGON_RAGE
 	db 48, OCTAZOOKA
-	db 52, RAIN_DANCE
+	db 52, FIRE_BLAST
 	db 59, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
