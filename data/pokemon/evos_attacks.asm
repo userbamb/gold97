@@ -845,11 +845,11 @@ GrowlitheEvosAttacks:
 	db 12, LEER
 	db 17, FLAME_WHEEL
 	db 23, REVERSAL
-	db 28, TAKE_DOWN
+	db 28, ROCK_HEAD
 	db 34, FLAMETHROWER
 	db 39, AGILITY
 	db 45, CRUNCH
-	db 50, OUTRAGE
+	db 50, MORNING_SUN
 	db 56, FIRE_BLAST
 	db 0 ; no more level-up moves
 
@@ -900,7 +900,7 @@ PoliwrathEvosAttacks:
 	db 1, HYPNOSIS
 	db 1, DOUBLESLAP
 	db 1, SUBMISSION
-	db 41, SUBMISSION
+	db 41, CROSS_CHOP
 	db 47, MIND_READER
 	db 0 ; no more level-up moves
 
