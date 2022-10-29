@@ -1848,12 +1848,12 @@ ElectabuzzEvosAttacks:
 	db 1, LEER
 	db 6, THUNDERSHOCK
 	db 10, LOW_KICK
-	db 14, SWIFT
+	db 14, CROSS_CUTTER
 	db 19, THUNDER_WAVE
-	db 25, THUNDERPUNCH
+	db 25, SPARK
 	db 32, LIGHT_SCREEN 
 	db 41, THUNDERBOLT
-	db 47, SCREECH
+	db 47, CROSS_CHOP
 	db 56, THUNDER
 	db 0 ; no more level-up moves
 
@@ -2274,7 +2274,7 @@ PetamoleEvosAttacks:
 	db 15, REFLECT
 	db 16, LEECH_SEED
 	db 23, SYNTHESIS
-	db 31, BODY_SLAM
+	db 31, SPORE
 	db 39, SAFEGUARD
 	db 47, LIGHT_SCREEN
 	db 55, SOLARBEAM
@@ -2291,7 +2291,7 @@ MeganiumEvosAttacks:
 	db 15, REFLECT
 	db 16, LEECH_SEED
 	db 23, SYNTHESIS
-	db 31, BODY_SLAM
+	db 31, SPORE
 	db 32, PETAL_DANCE
 	db 41, SAFEGUARD
 	db 51, LIGHT_SCREEN
@@ -3779,10 +3779,10 @@ LeafeonEvosAttacks:
 	db 8, SAND_ATTACK
 	db 16, RAZOR_LEAF
 	db 23, QUICK_ATTACK
-	db 30, DOUBLE_KICK
+	db 30, LEECH_SEED
 	db 36, MEGA_DRAIN
-	db 42, SLEEP_POWDER
+	db 42, SPORE
 	db 45, SOLARBEAM
 	db 47, AGILITY
-	db 52, SYNTHESIS
+	db 52, MEAN_LOOK
 	db 0 ; no more level-up moves
