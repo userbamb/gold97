@@ -1492,7 +1492,7 @@ ExeggutorEvosAttacks:
 	db 1, ABSORB
 	db 1, CONFUSION
 	db 22, STOMP
-	db 28, EGG_BOMB
+	db 28, RECOVER
 	db 37, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
@@ -1689,9 +1689,9 @@ KangaskhanEvosAttacks:
 	db 25, MEGA_PUNCH
 	db 31, DIZZY_PUNCH
 	db 37, CRUNCH
-	db 43, ENDURE
+	db 43, RECOVER
 	db 49, REVERSAL
-	db 55, OUTRAGE
+	db 55, CROSS_CHOP
 	db 0 ; no more level-up moves
 
 HorseaEvosAttacks:
@@ -1835,10 +1835,9 @@ JynxEvosAttacks:
 	db 9, LOVELY_KISS
 	db 13, POWDER_SNOW
 	db 21, DOUBLESLAP
-	db 25, ICE_PUNCH
 	db 35, MEAN_LOOK
-	db 41, BODY_SLAM
-	db 51, PERISH_SONG
+	db 41, RECOVER
+	db 51, HEAL_BELL
 	db 57, BLIZZARD
 	db 0 ; no more level-up moves
 
@@ -1847,8 +1846,8 @@ ElectabuzzEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 1, LEER
 	db 6, THUNDERSHOCK
-	db 10, LOW_KICK
-	db 14, CROSS_CUTTER
+	db 10, HEAL_BELL
+	db 14, RECOVER
 	db 19, THUNDER_WAVE
 	db 25, SPARK
 	db 32, LIGHT_SCREEN 
@@ -1868,8 +1867,9 @@ MagmarEvosAttacks:
 	db 25, FIRE_PUNCH
 	db 32, CONFUSE_RAY
 	db 41, FLAMETHROWER
-	db 47, SUNNY_DAY
-	db 56, FIRE_BLAST
+	db 47, HEAL_BELL
+	db 50, RECOVER
+	db 56, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 PinsirEvosAttacks:
@@ -1976,7 +1976,7 @@ VaporeonEvosAttacks:
 	db 6, SAND_ATTACK
 	db 10, WATER_GUN
 	db 14, QUICK_ATTACK
-	db 18, BITE
+	db 18, GROWTH
 	db 23, BUBBLEBEAM
 	db 27, AURORA_BEAM
 	db 33, ACID_ARMOR
@@ -1991,7 +1991,7 @@ JolteonEvosAttacks:
 	db 6, SAND_ATTACK
 	db 10, THUNDERSHOCK
 	db 14, QUICK_ATTACK
-	db 18, DOUBLE_KICK
+	db 18, GROWTH
 	db 23, SPARK
 	db 27, PIN_MISSILE
 	db 33, AGILITY
@@ -2006,11 +2006,11 @@ FlareonEvosAttacks:
 	db 6, SAND_ATTACK
 	db 10, EMBER
 	db 14, QUICK_ATTACK
-	db 18, BITE
+	db 18, GROWTH
 	db 23, FLAME_WHEEL
 	db 27, FIRE_SPIN
 	db 33, SMOG
-	db 38, SCARY_FACE
+	db 38, HEAL_BELL
 	db 45, FIRE_BLAST
 	db 0 ; no more level-up moves
 
@@ -2693,7 +2693,7 @@ AmpharosEvosAttacks:
 	db 12, THUNDER_WAVE
 	db 19, COTTON_SPORE
 	db 25, TAKE_DOWN
-	db 30, THUNDERPUNCH
+	db 30, HEAL_BELL
 	db 34, CONFUSE_RAY
 	db 42, LIGHT_SCREEN
 	db 51, THUNDER
