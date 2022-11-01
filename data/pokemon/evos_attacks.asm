@@ -775,7 +775,7 @@ PsyduckEvosAttacks:
 	db 9, WATER_GUN
 	db 14, DISABLE
 	db 18, CONFUSION
-	db 22, FURY_SWIPES
+	db 22, GROWTH
 	db 27, SCREECH
 	db 32, PSYBEAM
 	db 36, PSYCH_UP
@@ -793,7 +793,7 @@ GolduckEvosAttacks:
 	db 9, WATER_GUN
 	db 14, DISABLE
 	db 18, CONFUSION
-	db 22, FURY_SWIPES
+	db 22, GROWTH
 	db 27, SCREECH
 	db 34, PSYBEAM
 	db 39, PSYCH_UP
@@ -860,6 +860,7 @@ ArcanineEvosAttacks:
 	db 1, TAKE_DOWN
 	db 1, FLAME_WHEEL
 	db 50, EXTREMESPEED
+	db 59, SWORDS_DANCE
 	db 0 ; no more level-up moves
 
 PoliwagEvosAttacks:
@@ -1921,7 +1922,7 @@ GyaradosEvosAttacks:
 	db 36, SCARY_FACE
 	db 40, CRUNCH
 	db 44, HYDRO_PUMP
-	db 48, RAIN_DANCE
+	db 48, FLY
 	db 52, EMBER
 	db 0 ; no more level-up moves
 
@@ -2737,6 +2738,7 @@ AzumarillEvosAttacks:
 	db 42, HYDRO_PUMP
 	db 46, HEAL_BELL
 	db 52, PSYCHIC_M
+	db 60, THUNDER
 	db 0 ; no more level-up moves
 
 BomshealEvosAttacks:
@@ -3492,7 +3494,7 @@ Porygon2EvosAttacks:
 	db 32, RECOVER
 	db 36, TRI_ATTACK
 	db 44, LOCK_ON
-	db 48, ZAP_CANNON
+	db 48, THUNDER
 	db 0 ; no more level-up moves
 
 BallerineEvosAttacks:
@@ -3522,11 +3524,6 @@ SmeargleEvosAttacks:
 	db 21, SKETCH
 	db 31, SKETCH
 	db 41, SKETCH
-	db 51, SKETCH
-	db 61, SKETCH
-	db 71, SKETCH
-	db 81, SKETCH
-	db 91, SKETCH
 	db 0 ; no more level-up moves
 
 TyrogueEvosAttacks:
@@ -3736,6 +3733,7 @@ BlisseyEvosAttacks:
 	db 33, SOFTBOILED
 	db 40, HEAL_BELL
 	db 47, SEISMIC_TOSS
+	db 60, GROWTH
 	db 0 ; no more level-up moves
 
 LugiaEvosAttacks:
