@@ -1,6 +1,6 @@
 	db LEAFEON ; 251
 
-	db 115,  60, 130,  95, 110,  75
+	db  85,  75, 130,  95, 110,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type

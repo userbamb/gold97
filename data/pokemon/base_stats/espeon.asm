@@ -1,6 +1,6 @@
 	db ESPEON ; 196
 
-	db  85,  65,  60, 110, 130,  95
+	db  85,  75,  80, 110, 130,  95
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC, PSYCHIC ; type
