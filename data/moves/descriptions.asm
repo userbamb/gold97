@@ -317,8 +317,8 @@ SwordsDanceDescription:
 	next "creases ATTACK.@"
 
 CutDescription:
-	db   "Cuts using claws,"
-	next "scythes, etc.@"
+	db   "Cuts using claws."
+	next "Hits first.@"
 
 GustDescription:
 	db   "Whips up a strong"
@@ -486,8 +486,8 @@ HydroPumpDescription:
 	next "type attack.@"
 
 SurfDescription:
-	db   "A strong water-"
-	next "type attack.@"
+	db   "An attack that may"
+	next "confuse the foe.@"
 
 IceBeamDescription:
 	db   "An attack that may"
@@ -538,8 +538,8 @@ SeismicTossDescription:
 	next "equals damage HP.@"
 
 StrengthDescription:
-	db   "A powerful physi-"
-	next "cal attack.@"
+    db   "A strong hit that"
+	next "raises ATTACK.@"
 
 AbsorbDescription:
 	db   "Steals 1/2 of the"
@@ -610,8 +610,8 @@ ThunderDescription:
 	next "cause paralysis.@"
 
 RockThrowDescription:
-	db   "Drops rocks on the"
-	next "enemy.@"
+	db   "A move that lowers"
+	next "the foe's SPEED.@"
 
 EarthquakeDescription:
 	db   "Tough but useless"
@@ -838,8 +838,8 @@ TransformDescription:
 	next "the foe's guise.@"
 
 BubbleDescription:
-	db   "An attack that may"
-	next "reduce SPEED.@"
+	db   "An attack that"
+	next "hits first.@"
 
 DizzyPunchDescription:
 	db   "An attack that may"
@@ -1094,8 +1094,8 @@ MilkDrinkDescription:
 	next "the max HP.@"
 
 SparkDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+	db   "Raises the user's"
+	next "ATTACK.@"
 
 FuryCutterDescription:
 	db   "Successive hits"
@@ -1110,8 +1110,8 @@ MeanLookDescription:
 	next "or switching.@"
 
 AttractDescription:
-	db   "Makes the opposite"
-	next "gender infatuated.@"
+	db   "Makes the foe"
+	next "infatuated.@"
 
 SleepTalkDescription:
 	db   "Randomly attacks"
