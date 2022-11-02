@@ -2707,7 +2707,7 @@ BellossomEvosAttacks:
 	db 1, STUN_SPORE
 	db 1, ACID
 	db 37, LEECH_SEED
-	db 51 SPORE
+	db 51, SPORE
 	db 55, SOLARBEAM
 	db 0 ; no more level-up moves
 
