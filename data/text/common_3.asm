@@ -475,9 +475,9 @@ UnknownText_0x1c4bfd::
 	done
 
 AlreadyHaveTMText::
-+	text "You already have"
-+	line "that TM."
-+	done
+	text "You already have"
+	line "that TM."
+	done
 
 UnknownText_0x1c4c08::
 	text_decimal wItemQuantityChangeBuffer, 1, 2
