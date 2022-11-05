@@ -34,8 +34,6 @@ CeladonPrizeRoom_tmcounterloop:
 	jump CeladonPrizeRoom_cancel
 
 .doubleteam
-	checkitem TM_DOUBLE_TEAM
-	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins 1500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	itemtotext TM_DOUBLE_TEAM, MEM_BUFFER_0
@@ -47,8 +45,6 @@ CeladonPrizeRoom_tmcounterloop:
 	jump CeladonPrizeRoom_purchased
 
 .psychic
-	checkitem TM_PSYCHIC_M
-	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins 3500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	itemtotext TM_PSYCHIC_M, MEM_BUFFER_0
@@ -60,8 +56,6 @@ CeladonPrizeRoom_tmcounterloop:
 	jump CeladonPrizeRoom_purchased
 
 .hyperbeam
-	checkitem TM_HYPER_BEAM
-	iftrue CeladonPrizeRoom_alreadyhavetm
 	checkcoins 7500
 	ifequal HAVE_LESS, CeladonPrizeRoom_notenoughcoins
 	itemtotext TM_HYPER_BEAM, MEM_BUFFER_0
@@ -83,11 +77,6 @@ CeladonPrizeRoom_purchased:
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
 	jump CeladonPrizeRoom_tmcounterloop
-
-CeladonPrizeRoom_alreadyhavetm:
-	writetext CeladonPrizeRoom_AlreadyHaveTMText
-	waitbutton
-	sjump CeladonPrizeRoom_tmcounterloop	
 
 CeladonPrizeRoom_notenoughcoins:
 	writetext CeladonPrizeRoom_NotEnoughCoinsText
@@ -486,11 +475,6 @@ CeladonPrizeRoom_ConfirmPurchaseText:
 
 CeladonPrizeRoom_HereYouGoText:
 	text "Here you go!"
-	done
-
-CeladonPrizeRoom_AlreadyHaveTMText:
-	text "You already have"
-	line "that TM."
 	done
 
 CeladonPrizeRoom_NotEnoughCoinsText:
