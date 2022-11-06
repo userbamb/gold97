@@ -847,7 +847,7 @@ GrowlitheEvosAttacks:
 	db 23, REVERSAL
 	db 28, ROCK_HEAD
 	db 34, FLAMETHROWER
-	db 39, AGILITY
+	db 39, EMBER
 	db 45, CRUNCH
 	db 50, MORNING_SUN
 	db 56, FIRE_BLAST
