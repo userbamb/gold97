@@ -1,6 +1,6 @@
 	db RAICHU ; 026
 
-	db  80,  90,  55, 100,  90,  80
+	db  90,  90,  75, 100, 100,  80
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC ; type

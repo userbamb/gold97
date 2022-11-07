@@ -2022,14 +2022,15 @@ PorygonEvosAttacks:
 	db 1, TACKLE
 	db 1, SHARPEN
 	db 1, CONVERSION
-	db 9, THUNDERSHOCK
+	db 9, EMBER
 	db 12, PSYBEAM
 	db 20, CONVERSION2
 	db 24, AGILITY
 	db 32, RECOVER
+	db 34, QUICK_ATTACK
 	db 36, TRI_ATTACK
 	db 44, LOCK_ON
-	db 48, ZAP_CANNON
+	db 48, THUNDER
 	db 0 ; no more level-up moves
 
 OmanyteEvosAttacks:
@@ -2709,6 +2710,7 @@ BellossomEvosAttacks:
 	db 37, LEECH_SEED
 	db 51, SPORE
 	db 55, SOLARBEAM
+	db 60, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 MarillEvosAttacks:
@@ -2737,7 +2739,6 @@ AzumarillEvosAttacks:
 	db 50, HYDRO_PUMP
 	db 52, PSYCHIC_M
 	db 56, METAL_CLAW
-	db 60, ROCK_HEAD
 	db 0 ; no more level-up moves
 
 BomshealEvosAttacks:
@@ -2945,6 +2946,7 @@ EspeonEvosAttacks:
 	db 33, HEAL_BELL
 	db 38, MORNING_SUN
 	db 45, PSYCHIC_M
+	db 57, MEAN_LOOK
 	db 0 ; no more level-up moves
 
 UmbreonEvosAttacks:
@@ -2960,6 +2962,7 @@ UmbreonEvosAttacks:
 	db 33, HEAL_BELL
 	db 38, MOONLIGHT
 	db 45, SLUDGE_BOMB
+	db 57, MEAN_LOOK
 	db 0 ; no more level-up moves
 
 MurkrowEvosAttacks:
@@ -3489,12 +3492,12 @@ Porygon2EvosAttacks:
 	db 1, TACKLE
 	db 1, DEFENSE_CURL
 	db 1, CONVERSION
-	db 9, THUNDERSHOCK
+	db 9, EMBER
 	db 12, PSYBEAM
 	db 20, CONVERSION2
 	db 24, AGILITY
 	db 32, RECOVER
-	db 35, THIEF
+	db 35, QUICK_ATTACK
 	db 36, TRI_ATTACK
 	db 44, LOCK_ON
 	db 48, THUNDER
