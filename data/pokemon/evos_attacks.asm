@@ -252,8 +252,6 @@ PidgeottoEvosAttacks:
 	db 24, TWISTER
 	db 29, WING_ATTACK
 	db 35, AGILITY
-	db 42, MIRROR_MOVE
-	db 48, RAZOR_WIND
 	db 0 ; no more level-up moves
 
 PidgeotEvosAttacks:
@@ -281,8 +279,6 @@ RattataEvosAttacks:
 	db 21, PURSUIT
 	db 25, HYPER_FANG
 	db 29, CRUNCH
-	db 35, SUPER_FANG
-	db 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 RaticateEvosAttacks:
@@ -338,7 +334,6 @@ EkansEvosAttacks:
 	db 25, ACID
 	db 30, SLAM
 	db 34, HAZE
-	db 39, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 
 ArbokEvosAttacks:
@@ -423,8 +418,6 @@ NidoranFEvosAttacks:
 	db 23, BITE
 	db 27, CHARM
 	db 32, DIG
-	db 36, TOXIC
-	db 40, CRUNCH
 	db 0 ; no more level-up moves
 
 NidorinaEvosAttacks:
