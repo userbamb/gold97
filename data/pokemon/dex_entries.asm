@@ -537,5 +537,4 @@ LugiaPokedexEntry::       INCLUDE "data/pokemon/dex_entries/silver/lugia.asm"
 HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/silver/ho_oh.asm"
 LeafeonPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/leafeon.asm"
 AzumarillPokedexEntry::     INCLUDE "data/pokemon/dex_entries/silver/azumarill.asm"
-FurretPokedexEntry::       INCLUDE "data/pokemon/dex_entries/silver/furret.asm"
 ENDC
