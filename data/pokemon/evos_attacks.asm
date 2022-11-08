@@ -2094,7 +2094,7 @@ AerodactylEvosAttacks:
 	db 15, SCARY_FACE
 	db 21, ROAR
 	db 29, ANCIENTPOWER
-	db 35, AGILITY
+	db 35, EARTHQUAKE
 	db 43, CRUNCH
 	db 49, ROCK_HEAD
 	db 57, HYPER_BEAM
