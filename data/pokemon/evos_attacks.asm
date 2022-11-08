@@ -3431,7 +3431,6 @@ HoundourEvosAttacks:
 	db 29, FLAME_WHEEL
 	db 35, FAINT_ATTACK
 	db 40, FLAMETHROWER
-	db 46, CRUNCH
 	db 0 ; no more level-up moves
 
 HoundoomEvosAttacks:
@@ -3446,6 +3445,7 @@ HoundoomEvosAttacks:
 	db 37, FAINT_ATTACK
 	db 44, FLAMETHROWER
 	db 51, CRUNCH
+	db 69, MOONLIGHT
 	db 0 ; no more level-up moves
 
 PhanpyEvosAttacks:
