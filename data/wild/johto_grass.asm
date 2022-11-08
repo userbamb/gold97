@@ -758,24 +758,18 @@ JohtoGrassWildMons:
 	db 20, NATU
 	db 21, NATU
 	db 21, NATU
-	db 21, SMEARGLE
-	db 20, SMEARGLE
 	db 22, PHANPY
 	db 22, PHANPY
 	; day
 	db 20, NATU
 	db 21, NATU
 	db 21, NATU
-	db 21, SMEARGLE
-	db 20, SMEARGLE
 	db 22, PHANPY
 	db 22, PHANPY
 	; nite
 	db 20, HOOTHOOT
 	db 21, RINRING
 	db 21, RINRING
-	db 21, SMEARGLE
-	db 20, SMEARGLE
 	db 22, HOOTHOOT
 	db 22, NOCTOWL
 	
@@ -786,22 +780,16 @@ JohtoGrassWildMons:
 	db 21, NATU
 	db 21, PHANPY
 	db 20, PHANPY
-	db 22, SMEARGLE
-	db 22, SMEARGLE
 	; day
 	db 20, NATU
 	db 21, NATU
 	db 21, NATU
 	db 21, PHANPY
 	db 20, PHANPY
-	db 22, SMEARGLE
-	db 22, SMEARGLE
 	; nite
 	db 20, HOOTHOOT
 	db 21, HOOTHOOT
 	db 21, NOCTOWL
-	db 21, SMEARGLE
-	db 20, SMEARGLE
 	db 22, RINRING
 	db 22, RINRING
 	ENDC
@@ -1330,7 +1318,6 @@ JohtoGrassWildMons:
 	db 32, ARBOK
 	db 33, PHANPY
 	db 34, DONPHAN
-	db 33, SMEARGLE
 	db 34, GOLBAT
 	db 35, GOLBAT
 	; day
@@ -1338,7 +1325,6 @@ JohtoGrassWildMons:
 	db 32, ARBOK
 	db 33, PHANPY
 	db 34, DONPHAN
-	db 33, SMEARGLE
 	db 34, GOLBAT
 	db 35, GOLBAT
 	; nite
@@ -1346,7 +1332,6 @@ JohtoGrassWildMons:
 	db 32, ARBOK
 	db 33, PHANPY
 	db 34, BELLRUN
-	db 33, SMEARGLE
 	db 34, GOLBAT
 	db 35, GOLBAT
 	

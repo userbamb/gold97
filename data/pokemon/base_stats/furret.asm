@@ -12,7 +12,7 @@
 	db 100 ; unknown 1
 	db 35 ; step cycles to hatch
 	db 5 ; unknown 2
-	INCBIN "gfx/pokemon/eevee/front.dimensions"
+	INCBIN "gfx/pokemon/furret/front.dimensions"
 	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_GROUND, EGG_GROUND ; egg groups

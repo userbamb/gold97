@@ -401,7 +401,7 @@ endr
 	jr nz, .valid
 
 .invalid
-	ld a, SMEARGLE
+	ld a, MEWTWO
 	ld [hl], a
 
 .valid
