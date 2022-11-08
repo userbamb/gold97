@@ -3707,7 +3707,7 @@ LeafeonEvosAttacks:
 	db 52, MEAN_LOOK
 	db 0 ; no more level-up moves
 
-	FurretEvosAttacks:
+FurretEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SWIFT
 	db 1, QUICK_ATTACK
@@ -3719,6 +3719,6 @@ LeafeonEvosAttacks:
 	db 43, REST
 	db 50, FIRE_PUNCH
 	db 57, SAFEGUARD
-	db 71, FUTURE_SIGHT
+	db 71, EXTREMESPEED
 	db 79, SACRED_FIRE
 	db 0 ; no more level-up moves
