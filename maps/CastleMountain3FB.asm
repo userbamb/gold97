@@ -253,7 +253,7 @@ GruntM41BeatenText:
 	done
 	
 GruntM41AfterBattleText:
-	text "SMEARGLE is"
+	text "FURRET is"
 	line "marvellous!"
 	
 	para "It can learn"

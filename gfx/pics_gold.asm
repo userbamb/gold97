@@ -162,7 +162,7 @@ BellossomFrontpic:   INCBIN "gfx/pokemon/bellossom/front.animated.2bpp.lz"
 SnorlaxFrontpic:     INCBIN "gfx/pokemon/snorlax/front.animated.2bpp.lz"
 WigglytuffFrontpic:  INCBIN "gfx/pokemon/wigglytuff/front.animated.2bpp.lz"
 CorasunFrontpic:     INCBIN "gfx/pokemon/corasun/front.animated.2bpp.lz"
-SmeargleFrontpic:    INCBIN "gfx/pokemon/smeargle/front.animated.2bpp.lz"
+FurretFrontpic:      INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
 ClefableFrontpic:    INCBIN "gfx/pokemon/clefable/front.animated.2bpp.lz"
 PonytaFrontpic:      INCBIN "gfx/pokemon/ponyta/front.animated.2bpp.lz"
 MurkrowFrontpic:     INCBIN "gfx/pokemon/murkrow/front.animated.2bpp.lz"
@@ -285,7 +285,7 @@ CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front.animated.2bpp.lz"
 UnownFBackpic:       INCBIN "gfx/pokemon/unown_f/back.2bpp.lz"
 AzumarillBackpic:    INCBIN "gfx/pokemon/azumarill/back.2bpp.lz"
-
+FurretBackpic:       INCBIN "gfx/pokemon/furret/back.2bpp.lz"
 
 SECTION "Pics 11", ROMX
 
@@ -418,6 +418,7 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
 AzumarillFrontpic:   INCBIN "gfx/pokemon/azumarill/front.animated.2bpp.lz"
+FurretFrontpic:      INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
 
 
 SECTION "Pics 14", ROMX
@@ -441,7 +442,7 @@ GeodudeFrontpic:     INCBIN "gfx/pokemon/geodude/front.animated.2bpp.lz"
 ScizorBackpic:       INCBIN "gfx/pokemon/scizor/back.2bpp.lz"
 GirafarigBackpic:    INCBIN "gfx/pokemon/girafarig/back.2bpp.lz"
 BallerineBackpic:    INCBIN "gfx/pokemon/ballerine/back.2bpp.lz"
-SmeargleBackpic:     INCBIN "gfx/pokemon/smeargle/back.2bpp.lz"
+FurretBackpic:       INCBIN "gfx/pokemon/furret/back.2bpp.lz"
 CharizardBackpic:    INCBIN "gfx/pokemon/charizard/back.2bpp.lz"
 KadabraBackpic:      INCBIN "gfx/pokemon/kadabra/back.2bpp.lz"
 PrimeapeBackpic:     INCBIN "gfx/pokemon/primeape/back.2bpp.lz"

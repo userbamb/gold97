@@ -348,7 +348,7 @@ BattleTowerMons1:
 	bigdw 22 ; SDef
 	db "DERUBIRU@@@"
 
-	db SMEARGLE ; DONE
+	db LEAFEON ; DONE
 	db KINGS_ROCK
 	db SPORE, MEAN_LOOK, PSYCHIC_M, SLAM
 	dw 0 ; OT ID

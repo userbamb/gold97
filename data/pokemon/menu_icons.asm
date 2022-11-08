@@ -254,3 +254,4 @@ MonMenuIcons:
 	db ICON_HO_OH       ; HO_OH
 	db ICON_FOX		    ; LEAFEON
 	db ICON_CLEFAIRY    ; AZUMARILL
+	db ICON_FOX         ; FURRET

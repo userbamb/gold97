@@ -846,5 +846,9 @@ WolfmanEggMoves:
 	db SCREECH
 	db -1 ; end
 
+FurretEggMoves:
+    db SWIFT
+	db -1 ; end
+
 NoEggMoves:
 	db -1 ; end

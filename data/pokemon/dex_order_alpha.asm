@@ -66,6 +66,7 @@ AlphabeticalPokedexOrder:
 	db FLAAFFY
 	db FLAMBEAR
 	db FLAREON
+	db FURRET
 	db GASTLY
 	db GELANIA
 	db GENGAR

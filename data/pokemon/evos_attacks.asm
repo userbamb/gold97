@@ -2514,9 +2514,6 @@ SpinarakEvosAttacks:
 	db 20, FURY_SWIPES
 	db 23, PURSUIT
 	db 27, SPIDER_WEB
-	db 31, AGILITY
-	db 34, PIN_MISSILE
-	db 38, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 TuheadEvosAttacks:
@@ -2624,9 +2621,6 @@ PeticornEvosAttacks:
 	db 15, FLAME_WHEEL
 	db 19, HEADBUTT
 	db 25, FIRE_SPIN
-	db 31, TAKE_DOWN
-	db 36, AGILITY
-	db 42, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
@@ -2785,12 +2779,6 @@ HoppipEvosAttacks:
 	db 14, STUN_SPORE
 	db 16, SLEEP_POWDER
 	db 19, GUST
-	db 22, MEGA_DRAIN
-	db 25, LEECH_SEED
-	db 28, COTTON_SPORE
-	db 31, AMNESIA
-	db 34, GIGA_DRAIN
-	db 37, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 SkiploomEvosAttacks:
@@ -2851,12 +2839,6 @@ GupgoldEvosAttacks:
 	db 1, PECK
 	db 1, TAIL_WHIP
 	db 8, SUPERSONIC
-	db 12, HORN_ATTACK
-	db 20, TACKLE
-	db 25, FURY_ATTACK
-	db 32, WATERFALL
-	db 36, HORN_DRILL
-	db 41, AGILITY
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
@@ -2885,10 +2867,6 @@ CorasunEvosAttacks:
 	db 19, BUBBLEBEAM
 	db 24, SCREECH
 	db 28, SLAM
-	db 33, ACID_ARMOR
-	db 37, CONFUSE_RAY
-	db 42, DOUBLE_EDGE
-	db 46, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 AnchorageEvosAttacks:
@@ -2998,11 +2976,6 @@ TritalesEvosAttacks:
 	db 11, QUICK_ATTACK
 	db 14, CONFUSE_RAY
 	db 20, FIRE_SPIN
-	db 24, SPITE
-	db 27, FAINT_ATTACK
-	db 33, FLAMETHROWER
-	db 37, SAFEGUARD
-	db 40, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 UnownEvosAttacks:
@@ -3055,11 +3028,6 @@ TurbanEvosAttacks:
 	db 19, PROTECT
 	db 24, ACID
 	db 28, BUBBLEBEAM
-	db 33, ACID_ARMOR
-	db 37, DIG
-	db 42, CRUNCH
-	db 46, DOUBLE_EDGE
-	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 GrimbyEvosAttacks:
@@ -3071,11 +3039,6 @@ GrimbyEvosAttacks:
 	db 11, MUD_SLAP
 	db 15, DISABLE
 	db 21, SLUDGE
-	db 25, MINIMIZE
-	db 30, SCREECH
-	db 36, ACID_ARMOR
-	db 40, SLUDGE_BOMB
-	db 45, TOXIC
 	db 0 ; no more level-up moves
 
 ParamiteEvosAttacks:
@@ -3088,9 +3051,6 @@ ParamiteEvosAttacks:
 	db 13, LEECH_LIFE
 	db 17, FURY_CUTTER
 	db 22, SPORE
-	db 27, SLASH
-	db 33, GROWTH
-	db 38, GIGA_DRAIN
 	db 0 ; no more level-up moves
 
 SteelixEvosAttacks:
@@ -3236,8 +3196,6 @@ QwilfishEvosAttacks:
 	db 21, SPARK
 	db 25, SELFDESTRUCT
 	db 33, PIN_MISSILE
-	db 37, DESTINY_BOND
-	db 45, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 NumbpuffEvosAttacks:
@@ -3336,10 +3294,6 @@ PuddipupEvosAttacks:
 	db 23, REVERSAL
 	db 28, TAKE_DOWN
 	db 34, FLAMETHROWER
-	db 39, AGILITY
-	db 45, CRUNCH
-	db 50, OUTRAGE
-	db 56, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 RemoraidEvosAttacks:
@@ -3510,10 +3464,6 @@ BallerineEvosAttacks:
 	db 21, REFLECT
 	db 25, PSYBEAM
 	db 29, ENCORE
-	db 33, SUBSTITUTE
-	db 37, PSYCHIC_M
-	db 41, BATON_PASS
-	db 46, SAFEGUARD
 	db 0 ; no more level-up moves
 
 SmeargleEvosAttacks:
@@ -3556,9 +3506,6 @@ SmoochumEvosAttacks:
 	db 21, CONFUSION
 	db 25, SING
 	db 33, MEAN_LOOK
-	db 37, PSYCHIC_M
-	db 45, PERISH_SONG
-	db 49, BLIZZARD
 	db 0 ; no more level-up moves
 
 ElebabeEvosAttacks:
@@ -3572,9 +3519,6 @@ ElebabeEvosAttacks:
 	db 19, THUNDER_WAVE
 	db 25, THUNDERPUNCH
 	db 30, LIGHT_SCREEN
-	db 36, THUNDERBOLT
-	db 41, SCREECH
-	db 47, THUNDER
 	db 0 ; no more level-up moves
 
 MagbyEvosAttacks:
@@ -3588,9 +3532,6 @@ MagbyEvosAttacks:
 	db 19, FIRE_SPIN
 	db 25, FIRE_PUNCH
 	db 30, CONFUSE_RAY
-	db 36, FLAMETHROWER
-	db 41, SUNNY_DAY
-	db 47, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 ChixEvosAttacks:
@@ -3602,11 +3543,6 @@ ChixEvosAttacks:
 	db 10, RAGE
 	db 14, FURY_ATTACK
 	db 19, PURSUIT
-	db 25, AGILITY
-	db 31, SWORDS_DANCE
-	db 36, DRILL_PECK
-	db 42, JUMP_KICK
-	db 47, THRASH
 	db 0 ; no more level-up moves
 
 MiltankEvosAttacks:
@@ -3682,9 +3618,6 @@ WolfanEvosAttacks:
 	db 12, FURY_SWIPES
 	db 18, LOW_KICK
 	db 23, MOONLIGHT
-	db 29, ICY_WIND
-	db 40, ROCK_HEAD
-	db 51, BLIZZARD
 	db 0 ; no more level-up moves
 
 WarwolfEvosAttacks:
@@ -3781,4 +3714,20 @@ LeafeonEvosAttacks:
 	db 45, SOLARBEAM
 	db 47, AGILITY
 	db 52, MEAN_LOOK
+	db 0 ; no more level-up moves
+
+	FurretEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, SWIFT
+	db 1, QUICK_ATTACK
+	db 9, GROWL
+	db 15, BODY_SLAM
+	db 23, FLAME_WHEEL
+	db 29, MORNING_SUN
+	db 30, DEFENSE_CURL
+	db 43, REST
+	db 50, FIRE_PUNCH
+	db 57, SAFEGUARD
+	db 71, FUTURE_SIGHT
+	db 79, SACRED_FIRE
 	db 0 ; no more level-up moves

@@ -473,8 +473,8 @@ PokemonPicPointers::
 	dba_pic Porygon2Backpic
 	dba_pic BallerineFrontpic
 	dba_pic BallerineBackpic
-	dba_pic SmeargleFrontpic
-	dba_pic SmeargleBackpic
+	dba_pic FurretFrontpic
+	dba_pic FurretBackpic
 	dba_pic TyrogueFrontpic
 	dba_pic TyrogueBackpic
 	dba_pic HitmontopFrontpic
@@ -512,4 +512,4 @@ PokemonPicPointers::
 	dba_pic AzumarillFrontpic
 	dba_pic AzumarillBackpic
 	dba_pic EggPic
-	dbw -1, -1 ; unused
+    dbw -1, -1 ; unused

@@ -235,7 +235,7 @@ EvosAttacksPointers::
 	dw DonphanEvosAttacks
 	dw Porygon2EvosAttacks
 	dw BallerineEvosAttacks
-	dw SmeargleEvosAttacks
+	dw FurretEvosAttacks
 	dw TyrogueEvosAttacks
 	dw HitmontopEvosAttacks
 	dw SmoochumEvosAttacks
