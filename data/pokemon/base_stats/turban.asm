@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, NORMAL ; type
-	db 60 ; catch rate
+	db 30 ; catch rate
 	db 203 ; base exp
 	db MIRACLEBERRY, MIRACLEBERRY ; items
 	db GENDER_F50 ; gender ratio
