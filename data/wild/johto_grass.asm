@@ -1354,14 +1354,14 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 34, SKIPLOOM
-	db 34, CHIKORITA
+	db 5,  CRUIZE
 	db 35, SUNFLORA
 	db 33, TOGEPI
 	db 34, SCYTHER
 	db 35, CHANSEY
 	db 36, CHANSEY
 	; day
-	db 34, CRUIZE
+	db 5,  CHIKORITA
 	db 34, SNUBBULL
 	db 35, SUNFLORA
 	db 33, TOGEPI
@@ -1369,7 +1369,7 @@ JohtoGrassWildMons:
 	db 35, CHANSEY
 	db 36, CHANSEY
 	; nite
-	db 34, FLAMBEAR
+	db 5, FLAMBEAR
 	db 34, CUBONE
 	db 35, NOCTOWL
 	db 33, BELLRUN
