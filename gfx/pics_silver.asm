@@ -716,8 +716,7 @@ InstructorPic:       INCBIN "gfx/trainers/instructor.2bpp.lz"
 FledglingPic:        INCBIN "gfx/trainers/fledgling.2bpp.lz"
 LugiaBackpic:        INCBIN "gfx/pokemon/lugia/back.2bpp.lz"
 LugiaFrontpic:       INCBIN "gfx/pokemon/lugia/front_S.animated.2bpp.lz"
-FurretBackpic:       INCBIN "gfx/pokemon/furret/back.2bpp.lz"
-FurretFrontpic:      INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
+
 
 ; Sections "Pics 20" to "Pics 24" are not used for any graphics,
 ; but entries for their banks exist in FixPicBank (see engine/gfx/load_pics.asm).
