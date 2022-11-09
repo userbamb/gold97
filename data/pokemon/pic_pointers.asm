@@ -513,3 +513,4 @@ PokemonPicPointers::
 	dba_pic AzumarillBackpic
 	dba_pic EggPic
     dbw -1, -1 ; unused
+	

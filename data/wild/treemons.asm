@@ -112,7 +112,7 @@ TreeMonSet_Forest:
 	db 15, NATU,     10
 	db 10, NOCTOWL,    10
 	db  5, BUTTERFREE, 10
-	db  5, BEEDRILL,   10
+	db  5, TURBAN,     14
 	db -1
 ; rare
 	db 50, HOOTHOOT,   10

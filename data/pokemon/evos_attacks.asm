@@ -3023,12 +3023,12 @@ TurbanEvosAttacks:
 	db 1, SWIFT
 	db 1, TACKLE
 	db 9, EMBER
-	db 15, DOUBLE_EDGE
+	db 14, TRANSFORM
 	db 23, MORNING_SUN
 	db 29, SUNNY_DAY
 	db 37, SING
 	db 43, FLAME_WHEEL
-	db 57, TRANSFORM
+	db 57, DOUBLE_TEAM
 	db 65, EXTREMESPEED
 	db 71, SACRED_FIRE
 	db 0 ; no more level-up moves
@@ -3719,3 +3719,4 @@ LeafeonEvosAttacks:
 	db 47, AGILITY
 	db 52, MEAN_LOOK
 	db 0 ; no more level-up moves
+	

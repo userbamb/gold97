@@ -208,7 +208,7 @@ PokemonCries::
 	mon_cry CRY_HOOTHOOT,    $162,  $100 ; UNOWN
 	mon_cry CRY_GIRAFARIG,   $06b,  $144 ; TWINZ
 	mon_cry CRY_GIRAFARIG,   $041,  $200 ; GIRAFARIG
-	mon_cry CRY_VULPIX,     -$21a,  $1f0 ; TURBAN
+	mon_cry CRY_LAPRAS,      $0A0,  $0E0 ; TURBAN
 	mon_cry CRY_GRIMER,      $080,  $0b0 ; GRIMBY
 	mon_cry CRY_PARAS,       $0c4,  $0b0 ; PARAMITE
 	mon_cry CRY_PIDGEY,      $162,  $120 ; METTO
