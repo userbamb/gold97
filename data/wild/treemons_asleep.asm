@@ -9,7 +9,7 @@ AsleepTreeMonsNite:
 	db BEEDRILL
 	db SPEAROW
 	db EKANS
-	db FURRET
+	db EXEGGCUTE
 	db LEDYBA
 	db AIPOM
 	db -1 ; end

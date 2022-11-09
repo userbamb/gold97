@@ -66,7 +66,6 @@ AlphabeticalPokedexOrder:
 	db FLAAFFY
 	db FLAMBEAR
 	db FLAREON
-	db FURRET
 	db GASTLY
 	db GELANIA
 	db GENGAR
@@ -209,6 +208,7 @@ AlphabeticalPokedexOrder:
 	db SLOWBRO
 	db SLOWKING
 	db SLOWPOKE
+	db SMEARGLE
 	db SMOOCHUM
 	db SNEASEL
 	db SNORLAX

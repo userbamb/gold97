@@ -234,7 +234,7 @@ PokedexDataPointerTable:
 	dw DonphanPokedexEntry
 	dw Porygon2PokedexEntry
 	dw MimeJrPokedexEntry
-	dw FurretPokedexEntry
+	dw SmearglePokedexEntry
 	dw TyroguePokedexEntry
 	dw HitmontopPokedexEntry
 	dw SmoochumPokedexEntry

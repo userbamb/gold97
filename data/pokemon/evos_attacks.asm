@@ -3466,6 +3466,16 @@ BallerineEvosAttacks:
 	db 29, ENCORE
 	db 0 ; no more level-up moves
 
+	SmeargleEvosAttacks:
+	db 0 ; no more evolutions
+	db 1, SKETCH
+	db 11, SKETCH
+	db 21, SKETCH
+	db 31, SKETCH
+	db 41, SKETCH
+	db 0 ; no more level-up moves
+	
+
 TyrogueEvosAttacks:
 	db EVOLVE_STAT, 20, ATK_LT_DEF, HITMONCHAN
 	db EVOLVE_STAT, 20, ATK_GT_DEF, HITMONLEE
@@ -3705,20 +3715,4 @@ LeafeonEvosAttacks:
 	db 45, SOLARBEAM
 	db 47, AGILITY
 	db 52, MEAN_LOOK
-	db 0 ; no more level-up moves
-
-FurretEvosAttacks:
-	db 0 ; no more evolutions
-	db 1, SWIFT
-	db 1, QUICK_ATTACK
-	db 9, GROWL
-	db 15, BODY_SLAM
-	db 23, FLAME_WHEEL
-	db 29, MORNING_SUN
-	db 30, DEFENSE_CURL
-	db 43, REST
-	db 50, FIRE_PUNCH
-	db 57, SAFEGUARD
-	db 71, EXTREMESPEED
-	db 79, SACRED_FIRE
 	db 0 ; no more level-up moves

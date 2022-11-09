@@ -348,7 +348,7 @@ BattleTowerMons1:
 	bigdw 22 ; SDef
 	db "DERUBIRU@@@"
 
-	db LEAFEON ; DONE
+	db SMEARGLE ; DONE
 	db KINGS_ROCK
 	db SPORE, MEAN_LOOK, PSYCHIC_M, SLAM
 	dw 0 ; OT ID
@@ -452,31 +452,31 @@ BattleTowerMons1:
 	bigdw 25 ; SDef
 	db "NAtuSI-@@@@"
 
-	db TURBAN ; DONE
-	db GOLD_BERRY
-	db BITE, SURF, PROTECT, MUD_SLAP
+		db SLOWKING
+	db MINT_BERRY
+	db REST, SURF, PSYCHIC_M, AMNESIA
 	dw 0 ; OT ID
-	dt 1000 ; Exp
+	dt 125000 ; Exp
 	; Stat exp
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	bigdw 30000
-	dn 15, 7, 15, 7 ; DVs
-	db 15, 10, 20, 15 ; PP
-	db 100 ; Happiness
+	bigdw 50000
+	bigdw 40000
+	bigdw 45000
+	bigdw 50000
+	bigdw 50000
+	dn 13, 15, 13, 14 ; DVs
+	db 10, 15, 10, 20 ; PP
+	db 15 ; Happiness
 	db 0, 0, 0 ; Pokerus, Caught data
-	db 10 ; Level
+	db 50 ; Level
 	db 0, 0 ; Status
-	bigdw 45 ; HP
-	bigdw 45 ; Max HP
-	bigdw 32 ; Atk
-	bigdw 44 ; Def
-	bigdw 20 ; Spd
-	bigdw 30 ; SAtk
-	bigdw 27 ; SDef
-	db "HERAKUROSU@"
+	bigdw 196 ; HP
+	bigdw 196 ; Max HP
+	bigdw 118 ; Atk
+	bigdw 126 ; Def
+	bigdw 75 ; Spd
+	bigdw 146 ; SAtk
+	bigdw 156 ; SDef
+	db "YADOKINGU@@"
 
 	db UNOWN
 	db BERRY

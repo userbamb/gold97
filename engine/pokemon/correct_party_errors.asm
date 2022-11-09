@@ -23,13 +23,13 @@ Unreferenced_CorrectPartyErrors:
 	jr c, .next_species
 
 .invalid_species
-	ld [hl], MEWTWO
+	ld [hl], SMEARGLE
 	push hl
 	push bc
 	ld a, c
 	ld hl, wPartyMon1Species
 	call GetPartyLocation
-	ld [hl], MEWTWO
+	ld [hl], SMEARGLE
 	pop bc
 	pop hl
 
@@ -56,13 +56,13 @@ Unreferenced_CorrectPartyErrors:
 	jr c, .check_level
 
 .invalid_species_2
-	ld [hl], MEWTWO
+	ld [hl], SMEARGLE
 	push de
 	ld d, 0
 	ld hl, wPartySpecies
 	add hl, de
 	pop de
-	ld a, MEWTWO
+	ld a, SMEARGLE
 	ld [hl], a
 
 .check_level

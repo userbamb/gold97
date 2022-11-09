@@ -254,7 +254,7 @@ JOHTO_POKEMON EQU const_value
 	const DONPHAN    ; e8
 	const PORYGON2   ; e9
 	const BALLERINE  ; ea
-	const FURRET     ; eb
+	const SMEARGLE   ; eb
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
 	const SMOOCHUM   ; ee
@@ -272,10 +272,9 @@ JOHTO_POKEMON EQU const_value
 	const LUGIA      ; fa
 	const HO_OH      ; fb
 	const LEAFEON    ; fc
-	const AZUMARILL  ; fd 
-
+	const AZUMARILL  ; fd
 NUM_POKEMON EQU const_value + -1
-	const EGG        ; fe 
+	const EGG        ; fe
 
 ; Unown forms
 ; indexes for:

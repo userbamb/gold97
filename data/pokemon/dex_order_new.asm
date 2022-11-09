@@ -163,7 +163,7 @@ NewPokedexOrder:
 	db ELECTABUZZ
 	db BALLERINE
 	db MR__MIME
-	db FURRET
+	db SMEARGLE
 	db FARFETCH_D
 	db MADAME
 	db NATU
