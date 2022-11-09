@@ -1,10 +1,10 @@
-	db "CONICAL@" ; species name
-	dw 401, 1380 ; height, weight
+	db "TANUKI@" ; species name
+	dw 200, 220 ; height, weight
 
-	db   "Despite appearing"
-	next "to have no limbs,"
-	next "this #MON is"
+	db   "This mystical be-"
+	next "ing is almost im-"
+	next "possible to see."
 
-	page "able to throw the"
-	next "weight of its body"
-	next "around with force.@"
+	page "Legends says it"
+	next "can transform in"
+	next "other species.@"

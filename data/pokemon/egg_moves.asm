@@ -615,10 +615,10 @@ TwinzEggMoves:
 	db -1 ; end
 
 TurbanEggMoves:
-	db BARRIER
-	db FLAIL
-	db MIRROR_COAT
-	db SPIKE_CANNON
+	db FLAME_WHEEL
+	db MORNING_SUN
+	db QUICK_ATTACK
+	db GROWTH
 	db SWIFT
 	db -1 ; end
 

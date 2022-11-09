@@ -380,7 +380,7 @@ KogaGroup:
 	db 84, TUHEAD, TWISTEDSPOON,   DOUBLE_TEAM, PIN_MISSILE, TOXIC, PSYCHIC_M
 	db 85, CROBAT, BRIGHTPOWDER,    DOUBLE_TEAM, CONFUSE_RAY, FLY, TOXIC
 	db 87, VENOMOTH, BRIGHTPOWDER,  SLEEP_POWDER, GIGA_DRAIN, PSYCHIC_M, TOXIC
-	db 86, TURBAN, QUICK_CLAW, CRUNCH, HYDRO_PUMP, PROTECT, SLUDGE_BOMB
+	db 86, TENTACRUEL, LEFTOVERS, ICE_BEAM, HYDRO_PUMP, PROTECT, SLUDGE_BOMB
 	db 87, WEEZING, POISON_BARB,   SLUDGE_BOMB, FLAMETHROWER, DESTINY_BOND, TOXIC
 	db 89, MUK, MIRACLEBERRY,  EARTHQUAKE, ACID_ARMOR, SLUDGE_BOMB, TOXIC
 	db -1 ; end
@@ -880,7 +880,7 @@ CooltrainerMGroup:
 
 	; COOLTRAINERM (13)
 	db "ERICK@", TRAINERTYPE_NORMAL; used, victory road 1f
-	db 46, TURBAN
+	db 46, TENTACRUEL
 	db 46, PRAXE
 	db 48, MAROWAK
 	db -1 ; end
@@ -1222,7 +1222,7 @@ PokemaniacGroup:
 	db "BRENT@", TRAINERTYPE_NORMAL; used, boardwalk
 	db 19, LICKITUNG
 	db 19, SLOWBRO
-	db 19, TURBAN
+	db 19, TENTACRUEL
 	db -1 ; end
 
 	; POKEMANIAC (7)
@@ -1245,7 +1245,7 @@ PokemaniacGroup:
 	; POKEMANIAC (12)
 	db "DONALD@", TRAINERTYPE_NORMAL ; used, goldenrod underground
 	db 12, SLOWPOKE
-	db 13, TURBAN
+	db 13, TENTACOOL
 	db -1 ; end
 
 	; POKEMANIAC (13)
@@ -1374,7 +1374,7 @@ GruntMGroup:
 
 	; GRUNTM (21)
 	db "GRUNT@", TRAINERTYPE_NORMAL; used, base b3f
-	db 40, TURBAN
+	db 40, TENTACRUEL
 	db 39, GOLBAT
 	db -1 ; end
 
@@ -1483,7 +1483,7 @@ GruntMGroup:
 	
 	; 40 new
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 56, TURBAN
+	db 56, TENTACRUEL
 	db 55, SLOWBRO
 	db -1
 	
@@ -1907,7 +1907,7 @@ SwimmerFGroup:
 	db "PAULA@", TRAINERTYPE_NORMAL; used, route 118
 	db 24, STARYU
 	db 24, SHELLDER
-	db 24, TURBAN
+	db 24, CLOYSTER
 	db -1 ; end
 
 	; SWIMMERF (3)
@@ -2597,7 +2597,7 @@ PsychicGroup:
 	db "NORMAN@", TRAINERTYPE_MOVES; used, route 39
 	db 30, SLOWPOKE,   HEADBUTT, DISABLE, WATER_GUN, CONFUSION
 	db 30, SLOWPOKE,   AMNESIA, BODY_SLAM, WATER_GUN, CONFUSION
-	db 32, TURBAN,     ACID, BUBBLEBEAM, ACID_ARMOR, PROTECT
+	db 32, TENTACRUEL,     ACID, BUBBLEBEAM, ACID_ARMOR, PROTECT
 	db -1 ; end
 
 	; PSYCHIC_T (7)
@@ -3362,7 +3362,7 @@ SportsmanGroup:; use cooltrainer m sprite
 	db "MANNY@", TRAINERTYPE_NORMAL ;used ,battle club wednesday
 	db 40, DODRIO
 	db 40, MAGNETON
-	db 40, TURBAN
+	db 40, TENTACRUEL
 	db 41, BELLRUN
 	db -1 ; end
 	
@@ -3388,7 +3388,7 @@ SoldierGroup:; use officer sprite
 	db "ANTONIO@", TRAINERTYPE_NORMAL ;used, victory road 2F
 	db 46, DUGTRIO
 	db 48, PRIMEAPE
-	db 47, TURBAN
+	db 47, TENTACRUEL
 	db -1 ; end
 	
 	; SOLDIER (3)

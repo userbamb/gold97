@@ -379,7 +379,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 12, MARILL
 	db 14, ONIX
-	db 14, TURBAN
+	db 14, CUBONE
 	; day
 	db 12, GEODUDE
 	db 12, SANDSHREW
@@ -387,7 +387,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 12, MARILL
 	db 14, ONIX
-	db 14, TURBAN
+	db 14, CUBONE
 	; nite
 	db 12, GEODUDE
 	db 12, SANDSHREW
@@ -395,7 +395,7 @@ JohtoGrassWildMons:
 	db 14, KOFFING
 	db 12, MARILL
 	db 14, ONIX
-	db 14, TURBAN
+	db 14, CUBONE
 	
 	map_id BOULDER_MINES_B3F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -458,7 +458,7 @@ JohtoGrassWildMons:
 	db 12, SANDSHREW
 	db 12, ZUBAT
 	db 14, MARILL
-	db 13, TURBAN
+	db 13, CUBONE
 	db 12, ONIX
 	db 14, ONIX
 	; day
@@ -466,7 +466,7 @@ JohtoGrassWildMons:
 	db 12, SANDSHREW
 	db 12, ZUBAT
 	db 14, MARILL
-	db 13, TURBAN
+	db 13, CUBONE
 	db 12, ONIX
 	db 14, ONIX
 	; nite
@@ -474,7 +474,7 @@ JohtoGrassWildMons:
 	db 12, SANDSHREW
 	db 12, ZUBAT
 	db 14, MARILL
-	db 13, TURBAN
+	db 13, CUBONE
 	db 12, ONIX
 	db 14, ONIX
 
@@ -541,24 +541,24 @@ JohtoGrassWildMons:
 	db 18, SLOWPOKE
 	db 17, SLOWPOKE
 	db 18, ZUBAT
-	db 19, TURBAN
-	db 20, TURBAN
+	db 19, SHELLDER
+	db 20, SHELLDER
 	; day
 	db 17, ZUBAT
 	db 18, ZUBAT
 	db 18, SLOWPOKE
 	db 17, SLOWPOKE
 	db 18, ZUBAT
-	db 19, TURBAN
-	db 20, TURBAN
+	db 19, SHELLDER
+	db 20, SHELLDER
 	; nite
 	db 17, ZUBAT
 	db 18, ZUBAT
 	db 18, SLOWPOKE
 	db 17, SLOWPOKE
 	db 18, ZUBAT
-	db 19, TURBAN
-	db 20, TURBAN
+	db 19, SHELLDER
+	db 20, SHELLDER
 
 	map_id SLOWPOKE_WELL_B2F
 	db 8 percent, 8 percent, 8 percent ; encounter rates: morn/day/nite
@@ -568,24 +568,24 @@ JohtoGrassWildMons:
 	db 18, SLOWPOKE
 	db 17, SLOWPOKE
 	db 18, ZUBAT
-	db 19, TURBAN
-	db 20, TURBAN
+	db 19, SHELLDER
+	db 20, SHELLDER
 	; day
 	db 17, ZUBAT
 	db 18, ZUBAT
 	db 18, SLOWPOKE
 	db 17, SLOWPOKE
 	db 18, ZUBAT
-	db 19, TURBAN
-	db 20, TURBAN
+	db 19, SHELLDER
+	db 20, SHELLDER
 	; nite
 	db 17, ZUBAT
 	db 18, ZUBAT
 	db 18, SLOWPOKE
 	db 17, SLOWPOKE
 	db 18, ZUBAT
-	db 19, TURBAN
-	db 20, TURBAN
+	db 19, SHELLDER
+	db 20, SHELLDER
 	
 	map_id ROUTE_116
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -2061,7 +2061,7 @@ JohtoGrassWildMons:
 	; morn
 	db 37, GOLBAT
 	db 38, POLIWHIRL
-	db 37, TURBAN
+	db 37, KINGLER
 	db 39, POLIWHIRL
 	db 40, GOLDUCK
 	db 40, SLOWBRO
@@ -2069,7 +2069,7 @@ JohtoGrassWildMons:
 	; day
 	db 37, GOLBAT
 	db 38, POLIWHIRL
-	db 37, TURBAN
+	db 37, KINGLER
 	db 39, POLIWHIRL
 	db 40, GOLDUCK
 	db 40, SLOWBRO
@@ -2077,7 +2077,7 @@ JohtoGrassWildMons:
 	; nite
 	db 37, GOLBAT
 	db 38, POLIWHIRL
-	db 37, TURBAN
+	db 37, KINGLER
 	db 39, POLIWHIRL
 	db 40, GOLDUCK
 	db 40, SLOWBRO
@@ -2088,7 +2088,7 @@ JohtoGrassWildMons:
 	; morn
 	db 37, GOLBAT
 	db 38, POLIWHIRL
-	db 37, TURBAN
+	db 37, KINGLER
 	db 39, POLIWHIRL
 	db 40, GOLDUCK
 	db 40, SLOWBRO
@@ -2096,7 +2096,7 @@ JohtoGrassWildMons:
 	; day
 	db 37, GOLBAT
 	db 38, POLIWHIRL
-	db 37, TURBAN
+	db 37, KINGLER
 	db 39, POLIWHIRL
 	db 40, GOLDUCK
 	db 40, SLOWBRO
@@ -2104,7 +2104,7 @@ JohtoGrassWildMons:
 	; nite
 	db 37, GOLBAT
 	db 38, POLIWHIRL
-	db 37, TURBAN
+	db 37, KINGLER
 	db 39, POLIWHIRL
 	db 40, GOLDUCK
 	db 40, SLOWBRO

@@ -204,7 +204,7 @@ MonMenuIcons:
 	db ICON_UNOWN       ; UNOWN
 	db ICON_GHOST       ; TWINZ
 	db ICON_EQUINE      ; GIRAFARIG
-	db ICON_SHELL       ; TURBAN
+	db ICON_FOX         ; TURBAN
 	db ICON_BLOB        ; GRIMBY
 	db ICON_BUG         ; PARAMITE
 	db ICON_BLOB        ; METTO

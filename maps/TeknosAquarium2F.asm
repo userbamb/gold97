@@ -159,7 +159,7 @@ Aqua2FExhibit2Text:
 	done
 	
 Aqua2FExhibit3Text:
-	text "TURBAN can survive"
+	text "SHELLDER surviveS"
 	line "on both land and"
 	cont "fully underwater."
 	para "It has a unique"

@@ -3020,14 +3020,17 @@ GirafarigEvosAttacks:
 
 TurbanEvosAttacks:
 	db 0 ; no more evolutions
+	db 1, SWIFT
 	db 1, TACKLE
-	db 1, WITHDRAW
-	db 6, POISON_STING
-	db 10, BITE
-	db 15, CLAMP
-	db 19, PROTECT
-	db 24, ACID
-	db 28, BUBBLEBEAM
+	db 9, EMBER
+	db 15, DOUBLE_EDGE
+	db 23, MORNING_SUN
+	db 29, SUNNY_DAY
+	db 37, SING
+	db 43, FLAME_WHEEL
+	db 57, TRANSFORM
+	db 65, EXTREMESPEED
+	db 71, SACRED_FIRE
 	db 0 ; no more level-up moves
 
 GrimbyEvosAttacks:

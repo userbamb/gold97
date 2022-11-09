@@ -202,7 +202,7 @@ PokemonNames::
 	db "UNOWN@@@@@"
 	db "TWINZ@@@@@"
 	db "GIRAFARIG@"
-	db "TURBAN@@@@"
+	db "FURRET@@@@"
 	db "GRIMBY@@@@"
 	db "PARAMITE@@"
 	db "METTO@@@@@"
