@@ -1790,7 +1790,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 38, VOLTORB
-	db 38, MAGNEMITE
+	db 10, PORYGON
 	db 37, PIKACHU
 	db 40, MAGNETON
 	db 43, ELECTRODE
@@ -1798,7 +1798,7 @@ JohtoGrassWildMons:
 	db 42, ELECTABUZZ
 	; day
 	db 38, VOLTORB
-	db 38, MAGNEMITE
+	db 10, PORYGON
 	db 37, PIKACHU
 	db 40, MAGNETON
 	db 43, ELECTRODE
@@ -1806,7 +1806,7 @@ JohtoGrassWildMons:
 	db 42, ELECTABUZZ
 	; nite
 	db 38, VOLTORB
-	db 38, MAGNEMITE
+	db 10, PORYGON
 	db 37, PIKACHU
 	db 40, PIKACHU
 	db 42, MAGNETON

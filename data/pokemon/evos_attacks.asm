@@ -2289,6 +2289,7 @@ MeganiumEvosAttacks:
 	db 31, SPORE
 	db 32, PETAL_DANCE
 	db 41, SAFEGUARD
+	db 50, LEECH_SEED
 	db 51, LIGHT_SCREEN
 	db 61, SOLARBEAM
 	db 0 ; no more level-up moves
