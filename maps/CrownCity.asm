@@ -59,11 +59,11 @@ CrownCityJanineText:
 	done
 	
 CrownCityRockerText:
-	text "As imposing as"
-	line "MT.FUJI is, this"
-	para "town at the base"
-	line "of the mountain"
-	cont "is really scenic."
+	text "Have you ever "
+	line "seen a FURRET? I"
+	para "think I saw one"
+	line "on a tree in the"
+	cont "JADE FOREST."
 	done
 	
 CrownCitySign2Text:
