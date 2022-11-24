@@ -1,5 +1,5 @@
-	db TANGTRIP ; 161
-
+    db 0 ; species ID placeholder
+	
 	db  40,  40,  70,  40,  70,  45
 	;   hp  atk  def  spd  sat  sdf
 

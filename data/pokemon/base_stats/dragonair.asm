@@ -1,5 +1,5 @@
-	db DRAGONAIR ; 148
-
+    db 0 ; species ID placeholder
+	
 	db  61,  84,  65,  70,  70,  70
 	;   hp  atk  def  spd  sat  sdf
 

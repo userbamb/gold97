@@ -1,5 +1,5 @@
-	db UNOWN ; 201
-
+    db 0 ; species ID placeholder
+	
 	db  48,  72,  48,  48,  72,  48
 	;   hp  atk  def  spd  sat  sdf
 

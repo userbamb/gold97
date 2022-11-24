@@ -1,5 +1,5 @@
-	db FLAAFFY ; 180
-
+    db 0 ; species ID placeholder
+	
 	db  70,  55,  55,  45,  80,  60
 	;   hp  atk  def  spd  sat  sdf
 

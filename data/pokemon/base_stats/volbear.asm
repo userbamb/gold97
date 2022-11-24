@@ -1,5 +1,5 @@
-	db VOLBEAR ; 156
-
+    db 0 ; species ID placeholder
+	
 	db  63,  70,  65,  76,  76,  55
 	;   hp  atk  def  spd  sat  sdf
 

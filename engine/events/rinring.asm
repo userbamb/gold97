@@ -6,7 +6,8 @@ GiveRinring:
 	ld [wMonType], a
 
 ; Level 15 Rinring.
-	ld a, RINRING
+	ld hl, RINRING
+	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 	ld a, 15
 	ld [wCurPartyLevel], a
@@ -66,16 +67,29 @@ GiveRinring:
 	ret
 
 SpecialRinringOT:
-	db "MANIA@"
+	db "POLINE@"
 SpecialRinringNick:
-	db "SHUCKIE@"
+	db "500@"
 
 ReturnRinring:
 	farcall SelectMonFromParty
 	jr c, .refused
 
 	ld a, [wCurPartySpecies]
-	cp RINRING
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(RINRING)
+	if HIGH(RINRING) == 0
+		or h
+	else
+		jr nz, .DontReturn
+		if HIGH(RINRING) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(RINRING)
+		endc
+	endc
 	jr nz, .DontReturn
 
 	ld a, [wCurPartyMon]

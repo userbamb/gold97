@@ -1,3 +1,21 @@
+; Eggs are negative now
+INCBIN "gfx/pokemon/egg/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/egg/shiny.pal"
+
+; -2
+	RGB 30, 26, 11
+	RGB 23, 16, 00
+; -2 shiny
+	RGB 30, 26, 11
+	RGB 23, 16, 00
+
+; -1
+	RGB 23, 23, 23
+	RGB 17, 17, 17
+; -1 shiny
+	RGB 23, 23, 23
+	RGB 17, 17, 17
+
 PokemonPalettes:
 ; entries correspond to Pokémon species, two apiece
 
@@ -518,15 +536,3 @@ INCBIN "gfx/pokemon/leafeon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/leafeon/shiny.pal"
 INCBIN "gfx/pokemon/azumarill/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/azumarill/shiny.pal"
-
-
-INCBIN "gfx/pokemon/egg/front.gbcpal", middle_colors
-INCLUDE "gfx/pokemon/egg/shiny.pal"
-
-
-; 255
-	RGB 23, 23, 23
-	RGB 17, 17, 17
-; 255 shiny
-	RGB 23, 23, 23
-	RGB 17, 17, 17

@@ -101,23 +101,42 @@ _GetFrontpic:
 	pop hl
 	ret
 
-GetFrontpicPointer:
+GetPicIndirectPointer:
 	ld a, [wCurPartySpecies]
-	cp UNOWN
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .not_unown
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
 	jr z, .unown
-	ld a, [wCurPartySpecies]
+.not_unown
+	ld hl, PokemonPicPointers
 	ld d, BANK(PokemonPicPointers)
-	jr .ok
+.done
+	ld a, 6
+	jp AddNTimes
 
 .unown
 	ld a, [wUnownLetter]
+	ld c, a
+	ld b, 0
+	ld hl, UnownPicPointers - 6
 	ld d, BANK(UnownPicPointers)
+jr .done
 
-.ok
-	ld hl, PokemonPicPointers ; UnownPicPointers
-	dec a
-	ld bc, 6
-	call AddNTimes
+GetFrontpicPointer:
+	call GetPicIndirectPointer
 	ld a, d
 	call GetFarByte
 	call FixPicBank
@@ -134,31 +153,16 @@ GetMonBackpic:
 	ld a, [wCurPartySpecies]
 	call IsAPokemon
 	ret c
-
-	ld a, [wCurPartySpecies]
-	ld b, a
-	ld a, [wUnownLetter]
-	ld c, a
 	ldh a, [rSVBK]
 	push af
+	push de
+	call GetPicIndirectPointer
 	ld a, BANK(wDecompressScratch)
 	ldh [rSVBK], a
-	push de
 
-	; These are assumed to be at the same address in their respective banks.
-	ld hl, PokemonPicPointers ; UnownPicPointers
-	ld a, b
-	ld d, BANK(PokemonPicPointers)
-	cp UNOWN
-	jr nz, .ok
-	ld a, c
-	ld d, BANK(UnownPicPointers)
-.ok
-	dec a
-	ld bc, 6
-	call AddNTimes
-	ld bc, 3
-	add hl, bc
+	inc hl
+	inc hl
+	inc hl
 	ld a, d
 	call GetFarByte
 	call FixPicBank
@@ -180,9 +184,6 @@ GetMonBackpic:
 	pop af
 	ldh [rSVBK], a
 	ret
-
-FixPicBank:
-; This is a thing for some reason.
 
 PICS_FIX EQU $36
 EXPORT PICS_FIX

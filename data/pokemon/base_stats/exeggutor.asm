@@ -1,5 +1,5 @@
-	db EXEGGUTOR ; 103
-
+    db 0 ; species ID placeholder
+	
 	db  95,  95,  85,  55, 125,  65
 	;   hp  atk  def  spd  sat  sdf
 

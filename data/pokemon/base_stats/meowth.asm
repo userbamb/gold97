@@ -1,5 +1,5 @@
-	db MEOWTH ; 052
-
+    db 0 ; species ID placeholder
+	
 	db  40,  45,  35,  90,  40,  40
 	;   hp  atk  def  spd  sat  sdf
 

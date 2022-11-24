@@ -1,5 +1,5 @@
-	db RINRING ; 213
-
+    db 0 ; species ID placeholder
+	
 	db  45,  55,  30,  85,  30,  45
 	;   hp  atk  def  spd  sat  sdf
 

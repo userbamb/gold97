@@ -1,5 +1,5 @@
-	db ESPEON ; 196
-
+    db 0 ; species ID placeholder
+	
 	db  85,  75,  80, 110, 130,  95
 	;   hp  atk  def  spd  sat  sdf
 

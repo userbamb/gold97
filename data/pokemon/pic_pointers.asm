@@ -1,6 +1,14 @@
 ; Pics are defined in gfx/pics.asm
-
+    dba EggPic ; EGG is now -3, so it must go *above* the label
+	dbw -1, -1 ; unused
+	dbw -1, -1 ; unused
+	dbw -1, -1 ; unused
+	dbw -1, -1 ; unused
+	dbw -1, -1 ; unused
 PokemonPicPointers::
+; entries correspond to Pokémon species, two apiece (first index is 0)
+	dbw -1, -1 ; unused
+	dbw -1, -1 ; unused
 ; entries correspond to Pokémon species, two apiece
 	dba_pic BulbasaurFrontpic
 	dba_pic BulbasaurBackpic
@@ -511,6 +519,3 @@ PokemonPicPointers::
 	dba_pic LeafeonBackpic
 	dba_pic AzumarillFrontpic
 	dba_pic AzumarillBackpic
-	dba_pic EggPic
-    dbw -1, -1 ; unused
-	

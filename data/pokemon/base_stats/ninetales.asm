@@ -1,5 +1,5 @@
-	db NINETALES ; 038
-
+    db 0 ; species ID placeholder
+	
 	db  73,  76,  75, 100,  91, 100
 	;   hp  atk  def  spd  sat  sdf
 

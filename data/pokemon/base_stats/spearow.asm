@@ -1,5 +1,5 @@
-	db SPEAROW ; 021
-
+    db 0 ; species ID placeholder
+	
 	db  40,  60,  30,  70,  31,  31
 	;   hp  atk  def  spd  sat  sdf
 

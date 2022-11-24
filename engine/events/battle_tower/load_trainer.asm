@@ -99,12 +99,11 @@ Function_LoadRandomBattleTowerMon:
 	call GetSRAMBank
 
 .FindARandomBattleTowerMon:
-	; From Which LevelGroup are the mon loaded
-	; a = 1..10
+	; a = 1, 2, ..., 10 indicating level 10, 20, ..., 100 opponents
 	ld a, [wBTChoiceOfLvlGroup]
 	dec a
 	ld hl, BattleTowerMons
-	ld bc, BattleTowerMons2 - BattleTowerMons1 ; size of one level group
+	ld bc, BattleTowerMons2 - (BattleTowerMons1 + 1) ; size of one level group
 	call AddNTimes
 
 	ldh a, [hRandomAdd]
@@ -117,94 +116,132 @@ Function_LoadRandomBattleTowerMon:
 	maskbits BATTLETOWER_NUM_UNIQUE_MON
 	cp BATTLETOWER_NUM_UNIQUE_MON
 	jr nc, .resample
-	; in register 'a' is the chosen mon of the LevelGroup
+	  
 
-	; Check if mon was already loaded before
-	; Check current and the 2 previous teams
-	; includes check if item is double at the current team
-	ld bc, PARTYMON_STRUCT_LENGTH + MON_NAME_LENGTH
+
+	ld bc, PARTYMON_STRUCT_LENGTH + MON_NAME_LENGTH + 1
 	call AddNTimes
+
+	ld a, [hli]
+
+
+	ld c, a
+	
 	ld a, [hli]
 	ld b, a
-	ld a, [hld]
-	ld c, a
-	ld a, [wBT_OTMon1]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon1Item]
-	cp c
-	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon2]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon2Item]
-	cp c
-	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon3]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [wBT_OTMon3Item]
-	cp c
-	jr z, .FindARandomBattleTowerMon
-	ld a, [sBTMonPrevTrainer1]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [sBTMonPrevTrainer2]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [sBTMonPrevTrainer3]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [sBTMonPrevPrevTrainer1]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [sBTMonPrevPrevTrainer2]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-	ld a, [sBTMonPrevPrevTrainer3]
-	cp b
-	jr z, .FindARandomBattleTowerMon
-
-	ld bc, PARTYMON_STRUCT_LENGTH + MON_NAME_LENGTH
-	call CopyBytes
-
-	ld a, [wNamedObjectIndexBuffer]
-	push af
-	push de
-	ld hl, - (PARTYMON_STRUCT_LENGTH + MON_NAME_LENGTH)
-	add hl, de
-	ld a, [hl]
-	ld [wNamedObjectIndexBuffer], a
-	ld bc, PARTYMON_STRUCT_LENGTH
-	add hl, bc
 	push hl
+	push de
+	; check if it matches any of the previous two trainers' chosen Pokémon (six Pokémon in total)
+	ld e, 6
+	ld hl, sBTMonPrevTrainer1
+.check_previous_mons_loop
+	ld a, [hli]
+	cp c
+	ld a, [hli]
+	jr nz, .check_previous_mons_next
+	cp b
+	jr z, .pop_and_retry
+.check_previous_mons_next
+	dec e
+	jr nz, .check_previous_mons_loop
+	ld h, b
+	ld l, c
+	call GetPokemonIDFromIndex
+	ld hl, wTempSpecies
+	ld [hl], a
+	; check if it matches any of the current trainer's first two Pokémon (no need to check for the last one)
+	ld a, [wBT_OTMon1]
+	cp [hl]
+	jr z, .pop_and_retry
+	ld a, [wBT_OTMon2]
+.pop_and_retry
+	pop de
+	pop hl
+	jr z, .FindARandomBattleTowerMon
+
+	; check if the held item matches any of the current trainer's first two Pokémon's held items
+
+	ld a, [wBT_OTMon1Item]
+	cp [hl]
+
+
+
+	jr z, .FindARandomBattleTowerMon
+    ld a, [wBT_OTMon2Item]
+	cp [hl]
+
+
+
+
+
+
+
+
+
+	jr z, .FindARandomBattleTowerMon
+; reserve and load the converted species from wTempSpecies and copy everything else
+	push hl
+	ld l, LOCKED_MON_ID_BATTLE_TOWER_1
+	ld a, e
+	; assume that NICKNAMED_MON_STRUCT_LENGTH is not a multiple of $80 (it's actually far less than $80)
+	cp LOW(wBT_OTMon1)
+	jr z, .got_index
+	inc l
+	cp LOW(wBT_OTMon2)
+	jr z, .got_index
+	inc l
+.got_index
+	ld a, [wTempSpecies]
+	ld [de], a
+	inc de
+	call LockPokemonID
+	pop hl
+	ld bc, PARTYMON_STRUCT_LENGTH + MON_NAME_LENGTH - 1
+	
+	call CopyBytes
+; rename the Pokémon to its default name (overriding the transliterated Japanese nicknames)
+	push de
+	ld hl, - MON_NAME_LENGTH
+	add hl, de
+	
+	push hl
+	; wNamedObjectIndexBuffer = wTempSpecies
 	call GetPokemonName
 	ld h, d
 	ld l, e
 	pop de
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
-
 	pop de
-	pop af
-	ld [wNamedObjectIndexBuffer], a
+	
 	pop bc
 	dec c
 	jp nz, .loop
 
-	ld a, [sBTMonPrevTrainer1]
-	ld [sBTMonPrevPrevTrainer1], a
-	ld a, [sBTMonPrevTrainer2]
-	ld [sBTMonPrevPrevTrainer2], a
-	ld a, [sBTMonPrevTrainer3]
-	ld [sBTMonPrevPrevTrainer3], a
+	push de
+	ld hl, sBTMonPrevTrainer1
+	ld de, sBTMonPrevPrevTrainer1
+	ld bc, 6
+	push hl
+	call CopyBytes
+	pop de
 	ld a, [wBT_OTMon1]
-	ld [sBTMonPrevTrainer1], a
+	call .store_index
 	ld a, [wBT_OTMon2]
-	ld [sBTMonPrevTrainer2], a
+	call .store_index
 	ld a, [wBT_OTMon3]
-	ld [sBTMonPrevTrainer3], a
-	call CloseSRAM
+	call .store_index
+	pop de
+	jp CloseSRAM
+
+.store_index
+	call GetPokemonIndexFromID
+	ld a, l
+	ld [de], a
+	inc de
+	ld a, h
+	ld [de], a
+	inc de
 	ret
 
 INCLUDE "data/battle_tower/classes.asm"

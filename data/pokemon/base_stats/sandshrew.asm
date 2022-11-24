@@ -1,5 +1,5 @@
-	db SANDSHREW ; 027
-
+    db 0 ; species ID placeholder
+	
 	db  50,  75,  85,  40,  20,  30
 	;   hp  atk  def  spd  sat  sdf
 

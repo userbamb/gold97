@@ -1,5 +1,5 @@
-	db FLAREON ; 136
-
+    db 0 ; species ID placeholder
+	
 	db  95,  80,  85,  75, 130, 110
 	;   hp  atk  def  spd  sat  sdf
 

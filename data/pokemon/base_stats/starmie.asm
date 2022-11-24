@@ -1,5 +1,5 @@
-	db STARMIE ; 121
-
+    db 0 ; species ID placeholder
+	
 	db  60,  75,  85, 115, 100,  85
 	;   hp  atk  def  spd  sat  sdf
 

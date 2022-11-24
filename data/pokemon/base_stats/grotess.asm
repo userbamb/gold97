@@ -1,5 +1,5 @@
-	db GROTESS ; 195
-
+    db 0 ; species ID placeholder
+	
 	db  95,  75, 115,  95,  80, 115
 	;   hp  atk  def  spd  sat  sdf
 

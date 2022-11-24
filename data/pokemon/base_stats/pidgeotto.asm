@@ -1,5 +1,5 @@
-	db PIDGEOTTO ; 017
-
+    db 0 ; species ID placeholder
+	
 	db  93,  90,  85,  71,  50,  80
 	;   hp  atk  def  spd  sat  sdf
 

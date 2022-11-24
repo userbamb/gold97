@@ -1,6 +1,6 @@
-	db XATU ; 178
-
-	db  65,  75,  70,  95,  95,  70
+    db 0 ; species ID placeholder
+	
+	db 135,  75,  70,  95, 109,  70
 	;   hp  atk  def  spd  sat  sdf
 
 	db FLYING, PSYCHIC ; type

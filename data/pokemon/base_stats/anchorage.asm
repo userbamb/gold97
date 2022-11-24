@@ -1,4 +1,4 @@
-	db ANCHORAGE ; 194
+	db 0 ; species ID placeholder
 
 	db  55,  80,  85,  85,  75,  85
 	;   hp  atk  def  spd  sat  sdf

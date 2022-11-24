@@ -1,5 +1,5 @@
-	db HORSEA ; 116
-
+    db 0 ; species ID placeholder
+	
 	db  30,  40,  70,  60,  70,  25
 	;   hp  atk  def  spd  sat  sdf
 

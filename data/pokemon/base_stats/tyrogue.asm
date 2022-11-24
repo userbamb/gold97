@@ -1,5 +1,5 @@
-	db TYROGUE ; 236
-
+    db 0 ; species ID placeholder
+	
 	db  35,  35,  35,  35,  35,  35
 	;   hp  atk  def  spd  sat  sdf
 

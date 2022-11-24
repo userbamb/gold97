@@ -1,5 +1,5 @@
-	db DYNABEAR ; 157
-
+    db 0 ; species ID placeholder
+	
 	db 105, 103,  85,  96, 95, 70
 	;   hp  atk  def  spd  sat  sdf
 

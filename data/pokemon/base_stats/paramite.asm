@@ -1,5 +1,5 @@
-	db PARAMITE ; 206
-
+    db 0 ; species ID placeholder
+	
 	db  30,  60,  45,  20,  35,  45
 	;   hp  atk  def  spd  sat  sdf
 

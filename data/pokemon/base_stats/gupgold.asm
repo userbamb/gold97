@@ -1,5 +1,5 @@
-	db GUPGOLD ; 118
-
+    db 0 ; species ID placeholder
+	
 	db  40,  50,  50,  52,  30,  40
 	;   hp  atk  def  spd  sat  sdf
 

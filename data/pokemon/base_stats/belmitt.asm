@@ -1,4 +1,4 @@
-	db BELMITT ; 185
+	db 0 ; species ID placeholder
 
 	db  75, 90,  60,  90, 105,  60
 	;   hp  atk  def  spd  sat  sdf

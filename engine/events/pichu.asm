@@ -12,11 +12,16 @@ GivePichu:
 	call .GetNthPartyMon
 	ld a, [bc]
 	ld c, a
+	push hl
+	ld hl, PICHU
+	call GetPokemonIDFromIndex
+	pop hl
+	ld b, a
 	ld de, PARTYMON_STRUCT_LENGTH
 .CheckForPichu:
 ; start at the end of the party and search backwards for a Pichu
 	ld a, [hl]
-	cp PICHU
+	cp b
 	jr z, .GiveMoveset
 	ld a, l
 	sub e
@@ -74,14 +79,14 @@ GivePichu:
 	db THUNDERSHOCK
 	db CHARM
 	db THUNDER_WAVE
-	db METRONOME
+	db EXTREMESPEED
 	db 0
 .Moveset1:
 ; it's here twice because I don't feel like figuring out how this code worked for dratini :^)
 	db THUNDERSHOCK
 	db CHARM
 	db THUNDER_WAVE
-	db METRONOME
+	db FLY
 	db 0
 
 .GetNthPartyMon:

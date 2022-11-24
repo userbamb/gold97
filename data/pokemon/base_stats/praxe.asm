@@ -1,5 +1,5 @@
-	db PRAXE ; 211
-
+    db 0 ; species ID placeholder
+	
 	db  75, 140, 100,  55,  60,  70
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,5 +1,5 @@
-	db KOTORA ; 170
-
+    db 0 ; species ID placeholder
+	
 	db  80,  55,  50,  40,  55,  60
 	;   hp  atk  def  spd  sat  sdf
 

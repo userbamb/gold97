@@ -1,5 +1,5 @@
-	db SANDSLASH ; 028
-
+    db 0 ; species ID placeholder
+	
 	db  75, 100, 110,  65,  45,  85
 	;   hp  atk  def  spd  sat  sdf
 

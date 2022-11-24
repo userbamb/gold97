@@ -1,5 +1,5 @@
-	db RATTATA ; 019
-
+    db 0 ; species ID placeholder
+	
 	db  30,  56,  35,  72,  25,  35
 	;   hp  atk  def  spd  sat  sdf
 

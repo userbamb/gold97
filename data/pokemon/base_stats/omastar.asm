@@ -1,5 +1,5 @@
-	db OMASTAR ; 139
-
+    db 0 ; species ID placeholder
+	
 	db  70,  60, 125,  55, 115,  70
 	;   hp  atk  def  spd  sat  sdf
 

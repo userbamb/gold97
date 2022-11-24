@@ -1,5 +1,5 @@
-	db PIKACHU ; 025
-
+    db 0 ; species ID placeholder
+	
 	db  35,  55,  30,  90,  50,  40
 	;   hp  atk  def  spd  sat  sdf
 

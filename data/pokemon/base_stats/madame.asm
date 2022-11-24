@@ -1,5 +1,5 @@
-	db MADAME ; 219
-
+    db 0 ; species ID placeholder
+	
 	db  87, 105,  70,  95,  65,  73
 	;   hp  atk  def  spd  sat  sdf
 

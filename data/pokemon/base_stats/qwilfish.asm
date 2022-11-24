@@ -1,5 +1,5 @@
-	db QWILFISH ; 216
-
+    db 0 ; species ID placeholder
+	
 	db  65,  85,  75,  85,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 

@@ -43,11 +43,15 @@ ReadTrainerParty:
 	dec b
 	jr z, .got_trainer
 .loop
-	ld a, [hli]
-	cp -1
-	jr nz, .loop
+    ld a, [hli]
+	call GetFarByte
+	add a, l
+	ld l, a
+	jr nc, .skip_trainer
+	inc h
 	jr .skip_trainer
 .got_trainer
+    inc hl
 
 .skip_name
 	ld a, [hli]
@@ -98,6 +102,13 @@ TrainerType1:
 
 	ld [wCurPartyLevel], a
 	ld a, [hli]
+	push hl
+	push af
+	call GetNextTrainerDataByte
+	ld h, a
+	pop af
+	ld l, a
+	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -117,6 +128,13 @@ TrainerType2:
 
 	ld [wCurPartyLevel], a
 	ld a, [hli]
+	push hl
+	push af
+	call GetNextTrainerDataByte
+	ld h, a
+	pop af
+	ld l, a
+	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -193,6 +211,13 @@ TrainerType3:
 
 	ld [wCurPartyLevel], a
 	ld a, [hli]
+	push hl
+	push af
+	call GetNextTrainerDataByte
+	ld h, a
+	pop af
+	ld l, a
+	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 	ld a, OTPARTYMON
 	ld [wMonType], a
@@ -221,6 +246,13 @@ TrainerType4:
 
 	ld [wCurPartyLevel], a
 	ld a, [hli]
+	push hl
+	push af
+	call GetNextTrainerDataByte
+	ld h, a
+	pop af
+	ld l, a
+	call GetPokemonIDFromIndex
 	ld [wCurPartySpecies], a
 
 	ld a, OTPARTYMON
@@ -228,6 +260,8 @@ TrainerType4:
 
 	push hl
 	predef TryAddMonToParty
+	inc hl ;because hl was pushed before the last call to GetNextTrainerDataByte
+	
 	ld a, [wOTPartyCount]
 	dec a
 	ld hl, wOTPartyMon1Item
@@ -331,6 +365,7 @@ Battle_GetTrainerName::
 	ld b, a
 	ld a, [wOtherTrainerClass]
 	ld c, a
+	; fallthrough
 
 GetTrainerName::
 	ld a, c
@@ -364,13 +399,19 @@ GetTrainerName::
 
 .loop
 	dec b
-	jr z, CopyTrainerName
+	jr z, .done
 
-.skip
-	ld a, [hli]
-	cp $ff
-	jr nz, .skip
+	ld a, [wTrainerGroupBank]
+	call GetFarByte
+	add a, l
+	ld l, a
+	jr nc, .loop
+	inc h
 	jr .loop
+	
+.done
+	inc hl
+	; fallthrough	
 
 CopyTrainerName:
 	ld de, wStringBuffer1

@@ -1,5 +1,5 @@
-	db DONPHAN ; 232
-
+    db 0 ; species ID placeholder
+	
 	db  90, 120, 120,  50,  60,  60
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,5 +1,5 @@
-	db GELANIA ; 162
-
+    db 0 ; species ID placeholder
+	
 	db 100, 100, 125,  50, 110,  50
 	;   hp  atk  def  spd  sat  sdf
 

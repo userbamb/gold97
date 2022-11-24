@@ -1,5 +1,5 @@
-	db WARWOLF ; 247
-
+    db 0 ; species ID placeholder
+	
 	db 120,  90,  80, 100,  90,  85
 	;   hp  atk  def  spd  sat  sdf
 

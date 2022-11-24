@@ -1,5 +1,5 @@
-	db CORASUN ; 193
-
+    db 0 ; species ID placeholder
+	
 	db  35,  45,  45,  75,  65,  75
 	;   hp  atk  def  spd  sat  sdf
 

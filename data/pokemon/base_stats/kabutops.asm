@@ -1,5 +1,5 @@
-	db KABUTOPS ; 141
-
+    db 0 ; species ID placeholder
+	
 	db  60, 115, 105,  80,  65,  70
 	;   hp  atk  def  spd  sat  sdf
 

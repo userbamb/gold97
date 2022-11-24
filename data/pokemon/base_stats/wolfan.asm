@@ -1,5 +1,5 @@
-	db WOLFAN ; 246
-
+    db 0 ; species ID placeholder
+	
 	db 70,  60,  50,  55,  70,  60
 	;   hp  atk  def  spd  sat  sdf
 

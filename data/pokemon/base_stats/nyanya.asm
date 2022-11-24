@@ -1,5 +1,5 @@
-	db NYANYA ; 218
-
+    db 0 ; species ID placeholder
+	
 	db  35,  40,  30,  85,  35,  35
 	;   hp  atk  def  spd  sat  sdf
 

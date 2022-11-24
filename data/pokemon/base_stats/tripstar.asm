@@ -1,5 +1,5 @@
-	db TRIPSTAR ; 166
-
+    db 0 ; species ID placeholder
+	
 	db  55,  85,  40,  85,  35, 100
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,4 +1,4 @@
-	db BOMSHEAL ; 184
+	db 0 ; species ID placeholder
 
 	db  95,  102,  67,  77,  112,  77
 	;   hp  atk  def  spd  sat  sdf

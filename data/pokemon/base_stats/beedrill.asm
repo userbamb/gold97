@@ -1,5 +1,5 @@
-	db BEEDRILL ; 015
-
+	db 0 ; species ID placeholder
+	
 	db  75,  90,  60,  75,  45,  80
 	;   hp  atk  def  spd  sat  sdf
 

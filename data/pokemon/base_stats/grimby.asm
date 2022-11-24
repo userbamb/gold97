@@ -1,5 +1,5 @@
-	db GRIMBY ; 205
-
+    db 0 ; species ID placeholder
+	
 	db  60,  70,  40,  15,  30,  40
 	;   hp  atk  def  spd  sat  sdf
 

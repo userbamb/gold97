@@ -1,4 +1,4 @@
-	db CHIX ; 241
+	db 0 ; species ID placeholder
 
 	db  30,  65,  40,  60,  30,  30
 	;   hp  atk  def  spd  sat  sdf

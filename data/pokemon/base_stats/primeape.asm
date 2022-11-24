@@ -1,5 +1,5 @@
-	db PRIMEAPE ; 057
-
+    db 0 ; species ID placeholder
+	
 	db  65, 105,  60,  95,  60,  70
 	;   hp  atk  def  spd  sat  sdf
 

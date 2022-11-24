@@ -1,4 +1,4 @@
-	db AQUARIUS ; 160
+	db 0 ; species ID placeholder
 
 	db  100, 80, 90,  65,  95,  100
 	;   hp  atk  def  spd  sat  sdf

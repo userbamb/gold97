@@ -1,5 +1,5 @@
-	db MACHOP ; 066
-
+    db 0 ; species ID placeholder
+	
 	db  70,  80,  50,  35,  35,  35
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,5 +1,5 @@
-	db NIDOQUEEN ; 031
-
+    db 0 ; species ID placeholder
+	
 	db  98,  92,  97,  77,  75,  95
 	;   hp  atk  def  spd  sat  sdf
 

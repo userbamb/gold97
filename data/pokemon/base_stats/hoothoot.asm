@@ -1,5 +1,5 @@
-	db HOOTHOOT ; 163
-
+    db 0 ; species ID placeholder
+	
 	db  60,  30,  30,  50,  36,  56
 	;   hp  atk  def  spd  sat  sdf
 

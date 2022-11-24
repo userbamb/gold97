@@ -1,5 +1,5 @@
-	db ELECTABUZZ ; 125
-
+    db 0 ; species ID placeholder
+	
 	db  75,  95,  67,  95, 123,  85
 	;   hp  atk  def  spd  sat  sdf
 

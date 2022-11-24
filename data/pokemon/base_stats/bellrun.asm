@@ -1,4 +1,4 @@
-	db BELLRUN ; 214
+	db 0 ; species ID placeholder
 
 	db  80,  60,  80, 110,  95,  85
 	;   hp  atk  def  spd  sat  sdf

@@ -1,5 +1,5 @@
-	db RAITORA ; 171
-
+    db 0 ; species ID placeholder
+	
 	db 115,  95,  99,  70, 95,  80
 	;   hp  atk  def  spd  sat  sdf
 

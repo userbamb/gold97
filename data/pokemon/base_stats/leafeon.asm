@@ -1,5 +1,5 @@
-	db LEAFEON ; 251
-
+    db 0 ; species ID placeholder
+	
 	db  85,  75, 130,  95, 110,  80
 	;   hp  atk  def  spd  sat  sdf
 

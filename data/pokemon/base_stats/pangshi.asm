@@ -1,5 +1,5 @@
-	db PANGSHI ; 221
-
+    db 0 ; species ID placeholder
+	
 	db  125, 67,  80,  48,  77,  95
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,5 +1,5 @@
-	db NIDORINO ; 033
-
+    db 0 ; species ID placeholder
+	
 	db  61,  72,  57,  65,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 

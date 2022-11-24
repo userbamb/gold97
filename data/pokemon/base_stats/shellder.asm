@@ -1,5 +1,5 @@
-	db SHELLDER ; 090
-
+    db 0 ; species ID placeholder
+	
 	db  30,  65, 100,  40,  45,  25
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,5 +1,5 @@
-	db LICKILORD ; 248
-
+    db 0 ; species ID placeholder
+	
 	db 110,  85,  95,  50,  80,  95
 	;   hp  atk  def  spd  sat  sdf
 

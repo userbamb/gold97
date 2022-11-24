@@ -1,5 +1,5 @@
-	db PETAMOLE ; 153
-
+    db 0 ; species ID placeholder
+	
 	db  62,  55,  80,  55,  63,  80
 	;   hp  atk  def  spd  sat  sdf
 

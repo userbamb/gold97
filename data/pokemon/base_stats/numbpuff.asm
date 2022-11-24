@@ -1,5 +1,5 @@
-	db NUMBPUFF ; 217
-
+    db 0 ; species ID placeholder
+	
 	db  90, 112, 100,  75,  85,  65
 	;   hp  atk  def  spd  sat  sdf
 

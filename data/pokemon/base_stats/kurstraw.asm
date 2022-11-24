@@ -1,5 +1,5 @@
-	db KURSTRAW ; 220
-
+    db 0 ; species ID placeholder
+	
 	db  43,  38,  71,  22,  63,  61
 	;   hp  atk  def  spd  sat  sdf
 

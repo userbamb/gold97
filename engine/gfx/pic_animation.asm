@@ -456,7 +456,20 @@ PokeAnim_StopWaitAnim:
 
 PokeAnim_IsUnown:
 	ld a, [wPokeAnimSpecies]
-	cp UNOWN
+	push hl
+	call GetPokemonIndexFromID
+	ld a, l
+	cp LOW(UNOWN)
+	ld a, h
+	pop hl
+	ret nz
+	if HIGH(UNOWN) == 0
+		and a
+	elif HIGH(UNOWN) == 1
+		dec a
+	else
+		cp HIGH(UNOWN)
+	endc
 	ret
 
 PokeAnim_IsEgg:
@@ -893,27 +906,28 @@ GetMonAnimPointer:
 	jr z, .egg
 
 	ld c, BANK(UnownAnimations)
-	ld hl, UnownAnimationPointers
-	ld de, UnownAnimationIdlePointers
+	ld hl, UnownAnimationPointers - 2
+	ld de, UnownAnimationIdlePointers - 2
 	call PokeAnim_IsUnown
 	jr z, .unown
 	ld c, BANK(PicAnimations)
-	ld hl, AnimationPointers
-	ld de, AnimationIdlePointers
+	ld hl, AnimationPointers - 2
+	ld de, AnimationIdlePointers - 2
 .unown
 
 	ld a, [wPokeAnimIdleFlag]
 	and a
-	jr z, .idles
-	ld h, d
-	ld l, e
-.idles
+	jr nz, .got_pointer
+	ld d, h
+	ld e, l
+.got_pointer
 
+	call PokeAnim_IsUnown
 	ld a, [wPokeAnimSpeciesOrUnown]
-	dec a
-	ld e, a
-	ld d, 0
-	add hl, de
+	ld l, a
+	ld h, 0
+	call nz, GetPokemonIndexFromID
+	add hl, hl
 	add hl, de
 	ld a, c
 	ld [wPokeAnimPointerBank], a
@@ -974,7 +988,7 @@ GetMonFramesPointer:
 	jr c, .got_frames
 	ld c, BANK(JohtoFrames)
 .got_frames
-	ld a, c
+	ld a, c ;Here im having trouble since code is different
 	ld [wPokeAnimFramesBank], a
 
 	ld a, [wPokeAnimSpeciesOrUnown]
@@ -1008,18 +1022,18 @@ GetMonBitmaskPointer:
 
 	call PokeAnim_IsUnown
 	ld a, BANK(UnownBitmasksPointers)
-	ld hl, UnownBitmasksPointers
+	ld de, UnownBitmasksPointers - 2
 	jr z, .unown
 	ld a, BANK(BitmasksPointers)
-	ld hl, BitmasksPointers
+	ld de, BitmasksPointers - 2
 .unown
 	ld [wPokeAnimBitmaskBank], a
 
 	ld a, [wPokeAnimSpeciesOrUnown]
-	dec a
-	ld e, a
-	ld d, 0
-	add hl, de
+	ld l, a
+	ld h, 0
+	call nz, GetPokemonIndexFromID
+	add hl, hl
 	add hl, de
 	ld a, [wPokeAnimBitmaskBank]
 	call GetFarHalfword

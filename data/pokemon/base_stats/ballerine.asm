@@ -1,4 +1,4 @@
-	db BALLERINE ; 234
+	db 0 ; species ID placeholder
 
 	db  20,  25,  45,  60,  70,  90
 	;   hp  atk  def  spd  sat  sdf

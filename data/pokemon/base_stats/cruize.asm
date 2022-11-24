@@ -1,5 +1,5 @@
-	db CRUIZE ; 158
-
+    db 0 ; species ID placeholder
+	
 	db  55,  45,  57,  35,  62,  60
 	;   hp  atk  def  spd  sat  sdf
 

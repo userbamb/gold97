@@ -1,5 +1,5 @@
-	db PUDDIPUP ; 222
-
+    db 0 ; species ID placeholder
+	
 	db  50,  65,  40,  50,  65,  45
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,5 +1,5 @@
-	db JUMPLUFF ; 189
-
+    db 0 ; species ID placeholder
+	
 	db  95,  75,  70, 130,  55,  85
 	;   hp  atk  def  spd  sat  sdf
 

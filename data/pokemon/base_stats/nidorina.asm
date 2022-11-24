@@ -1,5 +1,5 @@
-	db NIDORINA ; 030
-
+    db 0 ; species ID placeholder
+	
 	db  70,  62,  67,  56,  55,  55
 	;   hp  atk  def  spd  sat  sdf
 

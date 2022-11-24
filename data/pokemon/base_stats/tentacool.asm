@@ -1,5 +1,5 @@
-	db TENTACOOL ; 072
-
+    db 0 ; species ID placeholder
+	
 	db  40,  40,  35,  70,  50, 100
 	;   hp  atk  def  spd  sat  sdf
 

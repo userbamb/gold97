@@ -1,5 +1,5 @@
-	db IVYSAUR ; 002
-
+    db 0 ; species ID placeholder
+	
 	db  60,  62,  63,  60,  80,  80
 	;   hp  atk  def  spd  sat  sdf
 

@@ -1,4 +1,4 @@
-	db AQUALLO ; 159
+	db 0 ; species ID placeholder
 
 	db  75,  60,  70,  45,  77,  77
 	;   hp  atk  def  spd  sat  sdf

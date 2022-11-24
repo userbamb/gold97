@@ -1,5 +1,5 @@
-	db VAPOREON ; 134
-
+    db 0 ; species ID placeholder
+	
 	db 130,  75,  80,  85, 110,  95
 	;   hp  atk  def  spd  sat  sdf
 

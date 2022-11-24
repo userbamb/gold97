@@ -1,5 +1,5 @@
-	db KRABBY ; 098
-
+    db 0 ; species ID placeholder
+	
 	db  30, 105,  90,  50,  25,  25
 	;   hp  atk  def  spd  sat  sdf
 

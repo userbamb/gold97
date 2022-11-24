@@ -1,5 +1,5 @@
-	db FLAMBEAR ; 155
-
+    db 0 ; species ID placeholder
+		
 	db  45,  54,  50,  60,  60,  40
 	;   hp  atk  def  spd  sat  sdf
 

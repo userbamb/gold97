@@ -1,5 +1,5 @@
-	db RAPIDASH ; 078
-
+    db 0 ; species ID placeholder
+	
 	db  85,  80,  70, 105, 100,  80
 	;   hp  atk  def  spd  sat  sdf
 

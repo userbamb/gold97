@@ -1,5 +1,5 @@
-	db AERODACTYL ; 142
-
+    db 0 ; species ID placeholder
+	
 	db 120, 105,  75, 130,  90,  95
 	;   hp  atk  def  spd  sat  sdf
 
