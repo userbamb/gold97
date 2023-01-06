@@ -502,13 +502,11 @@ PokeBallEffect:
 	call ClearSprites
 
 	ld a, [wTempSpecies]
-	dec a
 	call CheckCaughtMon
 
 	ld a, c
 	push af
 	ld a, [wTempSpecies]
-	dec a
 	call SetSeenAndCaughtMon
 	pop af
 	and a
@@ -773,12 +771,13 @@ HeavyBallMultiplier:
 ; else add 30 to catch rate if weight < 409.6 kg
 ; else add 40 to catch rate (never happens)
 	ld a, [wEnemyMonSpecies]
-	ld hl, PokedexDataPointerTable
-	dec a
-	ld e, a
-	ld d, 0
+	call GetPokemonIndexFromID
+	dec hl
+	ld d, h
+	ld e, l
+	add hl, hl
 	add hl, de
-	add hl, de
+	ld de, PokedexDataPointerTable
 	ld a, BANK(PokedexDataPointerTable)
 	call GetFarHalfword
 
@@ -886,36 +885,30 @@ LureBallMultiplier:
 
 MoonBallMultiplier:
 ; fixed :^)
+    push de
 	push bc
 	ld a, [wTempEnemyMonSpecies]
-	dec a
-	ld c, a
-	ld b, 0
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, EvosAttacksPointers
-	add hl, bc
-	add hl, bc
 	ld a, BANK(EvosAttacksPointers)
-	call GetFarHalfword
-	pop bc
+	
 
-	push bc
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	cp EVOLVE_ITEM
+ld a, [wCurItem]
+	ld c, a
+	ld a, MOON_STONE
+	ld [wCurItem], a
+	ld d, h
+	ld e, l
+	farcall DetermineEvolutionItemResults
+	ld a, c
+	ld [wCurItem], a
+	ld a, d
+	or e
 	pop bc
-	ret nz
-
-	inc hl
-	inc hl
-	inc hl
-
-; fixed
-	push bc
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-	cp MOON_STONE
-	pop bc
-	ret nz
+	pop de
+	ret z
 
 	sla b
 	jr c, .max
@@ -992,33 +985,45 @@ LoveBallMultiplier:
 FastBallMultiplier:
 ; fixed :^)
 	ld a, [wTempEnemyMonSpecies]
-	ld c, a
+	call GetPokemonIndexFromID
+	ld d, h
+	ld e, l
 	ld hl, FleeMons
-	ld d, 3
+	ld c, 3
+	push bc
 
 .loop
 	ld a, BANK(FleeMons)
 	call GetFarByte
+	ld c, a
+	ld a, BANK(FleeMons)
+	call GetFarByte
+	ld b, a
+	and c
+	inc a
+	jr z, .next_list
+	ld a, b
+	cp d
+	jr nz, .loop
+	ld a, c
+	cp e
+	jr nz, .loop
 
-	inc hl
-	cp -1
-	jr z, .next
-	cp c
-	jr nz, .loop ; fixed
+	pop bc
 	sla b
 	jr c, .max
-
 	sla b
 	ret nc
-
 .max
 	ld b, $ff
 	ret
 
-.next
-	dec d
-	jr nz, .loop
-	ret
+.next_list
+	pop bc
+	dec c
+	ret z
+	push bc
+	jr .loop
 
 LevelBallMultiplier:
 ; multiply catch rate by 8 if player mon level / 4 > enemy mon level

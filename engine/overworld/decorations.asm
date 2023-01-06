@@ -563,6 +563,15 @@ GetDecoName:
 
 .getpokename
 	push bc
+	ld c, a
+	ld b, 0
+	ld hl, DecorationAttributePokemonNames
+	add hl, bc
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	call GetPokemonIDFromIndex
 	ld [wNamedObjectIndexBuffer], a
 	call GetPokemonName
 	pop bc
